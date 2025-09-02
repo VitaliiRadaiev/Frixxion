@@ -1,0 +1,235 @@
+@use "./utils/abstracts" as *;
+@use "sass:map";
+
+.last-no-margin {
+    &:last-child {
+        margin-bottom: 0 !important;
+    }
+}
+
+.first-no-margin {
+    &:first-child {
+        margin-top: 0 !important;
+    }
+}
+
+.first-child-no-margin {
+
+
+    &>*:first-child {
+        margin-top: 0 !important;
+    }
+}
+
+.last-child-no-margin {
+    &>*:last-child {
+        margin-bottom: 0 !important;
+    }
+
+}
+
+.sequential-index {
+    &>* {
+        @for $i from 1 through 20 {
+            &:nth-child(#{$i}) {
+                position: relative;
+                z-index: $i;
+            }
+        }
+    }
+}
+
+.reverse-index {
+    &>* {
+        @for $i from 1 through 40 {
+            &:nth-child(#{$i}) {
+                position: relative;
+                z-index: #{40 - $i};
+            }
+        }
+    }
+}
+
+.ibg {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100% !important;
+}
+
+.disabled {
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.mt-0.mt-0 {
+    margin-top: 0;
+}
+
+.mr-0.mr-0 {
+    margin-right: 0;
+}
+
+.mb-0.mb-0 {
+    margin-bottom: 0;
+}
+
+.ml-0.ml-0 {
+    margin-left: 0;
+}
+
+
+.section-space-top {
+    margin-top: 70px;
+
+    @media (min-width: $mq-md) {
+        margin-top: 100px;
+    }
+
+    @media (min-width: $mq-lg) {
+        margin-top: 120px;
+    }
+}
+
+.container-inline-size {
+    container-type: inline-size;
+}
+
+.pt-header-height {
+    --pt-header-height: 77px;
+    padding-top: var(--pt-header-height);
+
+    @media (min-width: $mq-4xl) {
+        --pt-header-height: 82px;
+    }
+}
+
+@each $size, $mq in $margin {
+    .mt-#{$size} {
+        margin-top: #{map.get($mq, sm)};
+
+        @media (min-width: $mq-md) {
+            margin-top: #{map.get($mq, md)};
+        }
+
+        @media (min-width: $mq-xl) {
+            margin-top: #{map.get($mq, xl)};
+        }
+
+        @media (min-width: $mq-4xl) {
+            margin-top: #{map.get($mq, 4xl)};
+        }
+    }
+
+    .mr-#{$size} {
+        margin-right: #{map.get($mq, sm)};
+
+        @media (min-width: $mq-md) {
+            margin-right: #{map.get($mq, md)};
+        }
+
+        @media (min-width: $mq-xl) {
+            margin-right: #{map.get($mq, xl)};
+        }
+
+        @media (min-width: $mq-4xl) {
+            margin-right: #{map.get($mq, 4xl)};
+        }
+    }
+
+    .mb-#{$size} {
+        margin-bottom: #{map.get($mq, sm)};
+
+        @media (min-width: $mq-md) {
+            margin-bottom: #{map.get($mq, md)};
+        }
+
+        @media (min-width: $mq-xl) {
+            margin-bottom: #{map.get($mq, xl)};
+        }
+
+        @media (min-width: $mq-4xl) {
+            margin-bottom: #{map.get($mq, 4xl)};
+        }
+    }
+
+    .ml-#{$size} {
+        margin-left: #{map.get($mq, sm)};
+
+        @media (min-width: $mq-md) {
+            margin-left: #{map.get($mq, md)};
+        }
+
+        @media (min-width: $mq-xl) {
+            margin-left: #{map.get($mq, xl)};
+        }
+
+        @media (min-width: $mq-4xl) {
+            margin-left: #{map.get($mq, 4xl)};
+        }
+    }
+}
+
+@each $size, $mq in $gap {
+    .gap-x-#{$size} {
+        column-gap: #{map.get($mq, sm)};
+
+        @media (min-width: $mq-md) {
+            column-gap: #{map.get($mq, md)};
+        }
+
+        @media (min-width: $mq-xl) {
+            column-gap: #{map.get($mq, xl)};
+        }
+
+        @media (min-width: $mq-4xl) {
+            column-gap: #{map.get($mq, 4xl)};
+        }
+    }
+
+    .gap-y-#{$size} {
+        row-gap: #{map.get($mq, sm)};
+
+        @media (min-width: $mq-md) {
+            row-gap: #{map.get($mq, md)};
+        }
+
+        @media (min-width: $mq-xl) {
+            row-gap: #{map.get($mq, xl)};
+        }
+
+        @media (min-width: $mq-4xl) {
+            row-gap: #{map.get($mq, 4xl)};
+        }
+    }
+}
+
+
+// Colors
+.gradient-first {
+    background-color: $gradient-first;
+}
+
+.gradient-second {
+    background-color: $gradient-second;
+}
+
+.text-gradient-first {
+    background: $gradient-first;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-second {
+    background: $gradient-second;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

@@ -1,0 +1,49 @@
+@use "./utils/abstracts" as *;
+@use './typography.scss';
+
+.breadcrumbs {
+    @extend .text-xs;
+
+    & a {
+        color: inherit;
+        transition: opacity $tran;
+        margin-right: 9px;
+
+        &::after {
+            content: '';
+            display: inline-block;
+            height: 6px;
+            width: 6px;
+            border-radius: 1px;
+            background-color: currentColor;
+            margin-left: 13px;
+            margin-bottom: 1px;
+        }
+
+        @media #{$mouse-device} {
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+    }
+
+    & .last {
+        opacity: 0.5;
+    }
+
+    & .separator {
+        display: none;
+    }
+
+    &+.section-space-top {
+        margin-top: 24px;
+
+        @media (min-width: $mq-md) {
+            margin-top: 34px;
+        }
+
+        @media (min-width: $mq-lg) {
+            margin-top: 56px;
+        }
+    }
+}

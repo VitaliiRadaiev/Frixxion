@@ -1,0 +1,21 @@
+@use "sass:math";
+
+$html-font-size: 16px;
+
+@function rem($pxValue) {
+  @return math.div($pxValue, $html-font-size) * 1rem;
+}
+
+@mixin fluid-font($font-min, $font-max, $screen-min, $screen-max) {
+  font-size: #{$font-min};
+
+  @media only screen and (min-width: #{$screen-min}px) {
+    font-size: calc(
+            #{$font-min} + #{($font-max - $font-min)} * (100vw - #{$screen-min}px) / (#{$screen-max} - #{$screen-min})
+    );
+  }
+
+  @media only screen and (min-width: #{$screen-max}px) {
+    font-size: #{$font-max};
+  }
+}

@@ -1,0 +1,76 @@
+@use "./utils/abstracts" as *;
+
+.input {
+    appearance: none;
+    display: flex;
+    align-items: center;
+    border-radius: 3px;
+    padding: 8px 16px;
+    background-color: #fff;
+    font-size: 16px;
+    line-height: 1.4em;
+    color: #000;
+    min-height: 50px;
+    width: 100%;
+    outline: none;
+
+    &::placeholder {
+        transition: color $tran;
+        color: rgba(#000, 0.5);
+    }
+
+    @media #{$mouse-device} {
+        &:hover {
+            &::placeholder {
+                color: rgba(#000, 0.7);
+            }
+        }
+    }
+
+    &:focus-visible {
+        background-color: #f0f0f0;
+    }
+
+    &[disabled] {
+        pointer-events: none;
+        opacity: 0.5;
+    }
+
+    &.wpcf7-not-valid,
+    &.not-valid {
+        outline: solid 1px $color-error;
+    }
+}
+
+.wpcf7-not-valid-tip,
+.not-valid-tip {
+    font-size: rem(12px);
+    line-height: 1.4em;
+    color: $color-error;
+    display: block;
+    margin-top: rem(2px);
+
+    &~.wpcf7-not-valid-tip {
+        display: none;
+    }
+}
+
+.form-fields {
+    & .input {
+        margin-top: 4px;
+    }
+}
+
+.wpcf7 {
+    position: relative;
+
+    & .screen-reader-response, & .wpcf7-response-output {
+        display: none;
+    }
+
+    & .loader {
+        background-color: rgba(#fff, 0.5);
+        border-radius: 6px;
+        inset: -10px;
+    }
+}

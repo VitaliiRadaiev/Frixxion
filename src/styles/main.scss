@@ -1,0 +1,44 @@
+@use "./fonts.scss";
+
+@use "./tailwind";
+
+@use "./icomoon/style.css";
+
+// plugins
+@use "../plugins/swiper/swiper-bundle.scss";
+@use "../plugins/aos/aos.css";
+@use "../plugins/popup/popup.scss";
+// /= plugins
+
+@use "./global.scss";
+
+@use "./utils/sup-classes.scss";
+@use "./utils/ui.scss";
+@use "./typography.scss";
+@use "./animations.scss";
+
+
+// modules
+@use "../modules/loader/loader.scss";
+@use "../modules/form-fields/form-fields.scss";
+@use "../modules/breadcrumbs/breadcrumbs.scss";
+
+@use "../../modules/header/header.scss";
+@use "../../modules/footer/footer.scss";
+// /= modulse
+
+
+// sections
+// /= sections
+
+// templates
+@use "../../templates/parts/button/button.scss";
+// /= templates
+
+.\!hidden {
+    display: none !important;
+}
+
+.hidden {
+    display: none;
+}

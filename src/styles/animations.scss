@@ -1,0 +1,21 @@
+@use "./utils/abstracts" as *;
+
+// [data-aos="rotate-child"] {
+//     transition-duration: 0s !important;
+//     & .aos-rotate-left {
+//         transform: rotate(450deg);
+//         transition: transform .6s $tf-bouncing;
+//     }
+//     & .aos-rotate-right {
+//         transform: rotate(-450deg);
+//         transition: transform .6s $tf-bouncing; 
+//     }
+//     &.aos-animate {
+//         & .aos-rotate-left {
+//             transform: rotate(0deg);
+//         }
+//         & .aos-rotate-right {
+//             transform: rotate(0deg);
+//         }
+//     }   
+// }

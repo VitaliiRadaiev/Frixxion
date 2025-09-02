@@ -1,0 +1,27 @@
+@use "./utils/abstracts" as *;
+@use "./typography.scss";
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+    border-radius: 50%;
+    min-width: 180px;
+    padding: 10px 30px;
+    @extend .text-md;
+
+    @media (min-width: $mq-lg) {
+        min-height: 52px;
+    }
+
+    &--dark {}
+    &--light {}
+    &--accent {}
+    
+    &--mob-full-width {
+        @media (max-width: $mq-sm-max) {
+            width: 100%;
+        }
+    }
+}

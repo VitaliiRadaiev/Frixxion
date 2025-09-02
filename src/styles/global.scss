@@ -1,0 +1,35 @@
+@use "./utils/abstracts" as *;
+@use "./typography.scss";
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #fff;
+    font-family: $main-font-family;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+main {
+    flex: 1 1 auto;
+    z-index: 2;
+}
+
+pageid {
+    display: none;
+}
+
+[data-scroll-container].swiper-vertical {
+    & .swiper-scrollbar {
+        top: 16px;
+        height: calc(100% - 32px);
+        right: 6px;
+    }
+
+    & .swiper-scrollbar-drag {
+
+    }
+}

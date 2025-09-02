@@ -1,0 +1,37 @@
+$fonts-folder: "../fonts";
+
+@font-face {
+    font-family: "HelveticaNeueCyr";
+    src: url("#{$fonts-folder}/HelveticaNeueCyr-Roman.woff") format("woff"),
+         url("#{$fonts-folder}/HelveticaNeueCyr-Roman.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "HelveticaNeueCyr";
+    src: url("#{$fonts-folder}/HelveticaNeueCyr-Italic.woff") format("woff"),
+         url("#{$fonts-folder}/HelveticaNeueCyr-Italic.woff2") format("woff2");
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "HelveticaNeueCyr";
+    src: url("#{$fonts-folder}/HelveticaNeueCyr-Medium.woff") format("woff"),
+         url("#{$fonts-folder}/HelveticaNeueCyr-Medium.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "HelveticaNeueCyr";
+    src: url("#{$fonts-folder}/HelveticaNeueCyr-Bold.woff") format("woff"),
+         url("#{$fonts-folder}/HelveticaNeueCyr-Bold.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+}

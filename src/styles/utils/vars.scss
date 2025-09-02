@@ -1,0 +1,102 @@
+@use "sass:map";
+
+$minwidth: 320px;
+$mq-sm: 576px;
+$mq-md: 744px;
+$mq-lg: 1024px;
+$mq-xl: 1280px;
+$mq-2xl: 1440px;
+$mq-3xl: 1600px;
+$mq-4xl: 1920px;
+$mq-sm-max: 575.98px;
+$mq-md-max: 743.98px;
+$mq-lg-max: 1023.98px;
+$mq-xl-max: 1279.98px;
+$mq-2xl: 1439.98px;
+$mq-3xl-max: 1599.98px;
+$mq-4xl-max: 1919.98px;
+$mouse-device: "(hover: hover) and (pointer: fine)";
+$touch-device: "(hover: none) and (pointer: coarse)";
+
+$main-font-family: "HelveticaNeueCyr", sans-serif;
+
+// interface colors
+$color-accent-first: #fb7d20; // Orange
+
+$color-accent-second: #fa2527; // Red
+
+$color-accent-third: #fcb503; // Yellow
+
+$color-dark: #191a1d; // Black
+$color-dark-80: #202125cc; // Black 80%
+$color-dark-40: #d7d7d7; // Grey
+$color-dark-20: #f0f0f0; // Light grey
+
+$color-light: #ffffff; // White
+
+$color-error: #F35C5C;
+
+$gradient-first: linear-gradient(105deg, #fb7d20 0%, #fa2527 100%); // Gradient
+$gradient-second: linear-gradient(270deg, #ffd5a8 0%, #ffdfba 19.9%, #ffebe8 100%); // Gradient 2
+
+// transition
+$tran: .2s ease;
+
+$margin: (
+    sm: (sm: 8px,
+        md: 10px,
+        xl: 10px,
+        4xl: 14px),
+    md: (sm: 20px,
+        md: 20px,
+        xl: 20px,
+        4xl: 30px),
+    lg: (sm: 30px,
+        md: 30px,
+        xl: 40px,
+        4xl: 50px),
+    xl: (sm: 50px,
+        md: 50px,
+        xl: 50px,
+        4xl: 60px),
+    2xl: (sm: 70px,
+        md: 70px,
+        xl: 70px,
+        4xl: 80px)
+);
+
+$gap: (
+    sm: (sm: 10px,
+        md: 20px,
+        xl: 24px,
+        4xl: 24px),
+    md: (sm: 20px,
+        md: 24px,
+        xl: 24px,
+        4xl: 30px),
+    lg: (sm: 30px,
+        md: 40px,
+        xl: 40px,
+        4xl: 40px),
+    xl: (sm: 50px,
+        md: 60px,
+        xl: 60px,
+        4xl: 60px)
+);
+
+:root {
+    --main-font-family: #{$main-font-family};
+
+    --color-accent-first: #{$color-accent-first};
+    --color-accent-second: #{$color-accent-second};
+    --color-accent-third: #{$color-accent-third};
+
+    --color-dark: #{$color-dark};
+    --color-dark-80: #{$color-dark-80};
+    --color-dark-40: #{$color-dark-40};
+    --color-dark-20: #{$color-dark-20};
+
+    --color-light: #{$color-light};
+
+    --color-error: #{$color-error};
+}
