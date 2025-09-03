@@ -6,22 +6,48 @@
     align-items: center;
     justify-content: center;
     min-height: 50px;
-    border-radius: 50%;
-    min-width: 180px;
-    padding: 10px 30px;
+    border-radius: 999px;
+    padding: 10px 60px;
     @extend .text-md;
+    font-weight: 500;
+    cursor: pointer;
 
     @media (min-width: $mq-lg) {
         min-height: 52px;
     }
 
     &--dark {}
-    &--light {}
+
+    &--light {
+        background-color: $color-light;
+        border: 1px solid $color-dark;
+        color: $color-dark;
+        transition: outline $tran;
+
+        @media #{$mouse-device} {
+            &:hover:not(:active) {
+                outline: 1.5px solid $color-dark;
+            }
+        }
+
+        &:active {
+            transition: outline 0s;
+            outline: 2px solid $color-dark;
+        }
+    }
+
     &--accent {}
-    
+
     &--mob-full-width {
         @media (max-width: $mq-sm-max) {
             width: 100%;
+        }
+    }
+
+    &--sm {
+        @media (min-width: $mq-lg) {
+            min-height: 46px;
+            padding: 10px 40px;
         }
     }
 }

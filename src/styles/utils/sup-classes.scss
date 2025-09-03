@@ -102,12 +102,8 @@
 }
 
 .pt-header-height {
-    --pt-header-height: 77px;
+    --pt-header-height: 83px;
     padding-top: var(--pt-header-height);
-
-    @media (min-width: $mq-4xl) {
-        --pt-header-height: 82px;
-    }
 }
 
 @each $size, $mq in $margin {
@@ -212,12 +208,12 @@
 
 
 // Colors
-.gradient-first {
-    background-color: $gradient-first;
+.bg-gradient-first {
+    background-image: $gradient-first;
 }
 
-.gradient-second {
-    background-color: $gradient-second;
+.bg-gradient-second {
+    background-image: $gradient-second;
 }
 
 .text-gradient-first {

@@ -206,7 +206,7 @@ function initSetElSizeVariables() {
         heightFnList.push(debounce(() => {
             targetElem.style.setProperty(varName, `${el.clientHeight}px`);
         }, 150));
-        
+
         setTimeout(() => {
             targetElem.classList.add('end-animation');
         }, 600);
@@ -228,4 +228,26 @@ function initSetElSizeVariables() {
         heightFnList.forEach(fn => fn());
         widthFnList.forEach(fn => fn());
     });
+}
+
+function initDetectIsDoucementScrolling() {
+    if (window.scrollY > 10) {
+        document.body.classList.add('document-is-scrolling');
+    }
+
+    let isScroll = window.scrollY;
+
+    window.addEventListener('scroll', () => {
+        document.body.classList.toggle('document-is-scrolling', window.scrollY > 10);
+
+        if (window.scrollY > 200) {
+            if (window.scrollY > isScroll) {
+                document.body.classList.add('document-scroll-down');
+            } else if (window.scrollY < isScroll) {
+                document.body.classList.remove('document-scroll-up');
+            }
+        }
+
+        isScroll = window.scrollY;
+    })
 }

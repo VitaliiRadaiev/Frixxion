@@ -106,12 +106,23 @@ function get_social_icon_by_url($url)
   return null;
 }
 
-function get_part_path($file_name) {
-  return 'templates/parts/'. $file_name .'/'. $file_name;
+function get_part_path($file_name)
+{
+  return 'templates/parts/' . $file_name . '/' . $file_name;
 }
 
-function cf7_obj($section_form_shortcode) {
+function cf7_obj($section_form_shortcode)
+{
   if ($section_form_shortcode instanceof WP_Post && $section_form_shortcode->post_type === 'wpcf7_contact_form') {
-      echo do_shortcode('[contact-form-7 id="' . $section_form_shortcode->ID . '"]');
+    echo do_shortcode('[contact-form-7 id="' . $section_form_shortcode->ID . '"]');
   }
+}
+
+function render_menu_link($menu, $classes = '', $attr = '')
+{
+?>
+  <a href="<?= $menu['url'] ?>" target="<?= $menu['target'] ? '_blank' : '_self' ?>" <?= $attr ?> class="<?= $classes ?>">
+    <?= $menu['title'] ?>
+  </a>
+<?php
 }

@@ -84,19 +84,3 @@ $gap: (
         4xl: 60px)
 );
 
-:root {
-    --main-font-family: #{$main-font-family};
-
-    --color-accent-first: #{$color-accent-first};
-    --color-accent-second: #{$color-accent-second};
-    --color-accent-third: #{$color-accent-third};
-
-    --color-dark: #{$color-dark};
-    --color-dark-80: #{$color-dark-80};
-    --color-dark-40: #{$color-dark-40};
-    --color-dark-20: #{$color-dark-20};
-
-    --color-light: #{$color-light};
-
-    --color-error: #{$color-error};
-}

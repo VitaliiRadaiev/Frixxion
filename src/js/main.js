@@ -32,7 +32,12 @@ window.addEventListener("DOMContentLoaded", () => {
     initInputMask();
     initScrollContainers();
     initSetElSizeVariables();
+    initDetectIsDoucementScrolling();
 
     // sections
     // /= sections
+
+    // modules
+    @@include('../../modules/header/header.js')
+    // /= modules
 }); 

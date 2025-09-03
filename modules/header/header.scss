@@ -1,3 +1,41 @@
+@use "./utils/abstracts" as *;
+
+.document-is-scrolling {
+    & .header {
+        &::before {
+            opacity: 1;
+        }
+    }
+}
+
+.header {
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        background: $gradient-second;
+        transition: opacity $tran;
+        opacity: 0;
+    }
+
+    & .header--no-gradient {
+        &::before {
+            opacity: 0;
+        }
+    }
+}
+
+.mobile-menu {
+    transition: opacity $tran, transform $tran, visibility $tran;
+
+    &--open {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+}
+
 [data-action="open-mobile-menu"] {
     &.active {
         & span {

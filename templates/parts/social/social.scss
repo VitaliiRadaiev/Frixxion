@@ -1,0 +1,7 @@
+@use "./utils/abstracts" as *;
+
+.social--dark {
+    & a {
+        background-color: $color-dark;
+    }
+}
