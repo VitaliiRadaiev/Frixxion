@@ -1,0 +1,20 @@
+@use "./utils/abstracts" as *;
+
+.grey-card-with-number {
+    position: relative;
+
+    @media (min-width: $mq-md) {
+        &::after {
+            content: '';
+            z-index: 1;
+            height: 32px;
+            width: 32px;
+            background-color: $color-dark-20;
+            display: block;
+            position: absolute;
+            top: 30px;
+            right: 0;
+            transform: rotate(45deg) translateX(20px);
+        }
+    }
+}

@@ -848,6 +848,7 @@ window.addEventListener("DOMContentLoaded", () => {
     initDetectIsDoucementScrolling();
 
     // sections
+    
     // /= sections
 
     // modules
@@ -860,8 +861,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
         btnBurger.addEventListener('click', () => {
             isMenuOpen = !isMenuOpen;
-            console.log('test');
-            
             mobileMenu.classList.toggle('mobile-menu--open', isMenuOpen);
             btnBurger.classList.toggle('active', isMenuOpen);
             header.classList.toggle('header--no-gradient', isMenuOpen);

@@ -35,6 +35,7 @@ window.addEventListener("DOMContentLoaded", () => {
     initDetectIsDoucementScrolling();
 
     // sections
+    @@include('../../sections/full-screen-hero/full-screen-hero.js')
     // /= sections
 
     // modules

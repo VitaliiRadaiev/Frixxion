@@ -221,6 +221,7 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    text-shadow: none;
 }
 
 .text-gradient-second {
@@ -228,4 +229,21 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    text-shadow: none;
+}
+
+.text-light-shadow {
+    text-shadow: 0px 0px 4px rgba(#fff, 0.4);
+}
+
+.buttons-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    @media (min-width: $mq-sm) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
 }
