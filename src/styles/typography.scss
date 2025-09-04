@@ -125,6 +125,7 @@ span {
     --h-weight: 500;
     --h-color: #{$color-dark};
     --strong-color: #{$color-dark};
+    --link-color: var(--color-accent-first);
 
     &>*:last-child {
         margin-bottom: 0 !important;
@@ -263,16 +264,21 @@ span {
         }
     }
 
-    & p a,
-    li a {
+    & p a:not(.link),
+    li a:not(.link) {
         text-decoration-line: underline;
         transition: opacity $tran;
+        color: var(--link-color);
 
         @media #{$mouse-device} {
             &:hover {
                 opacity: 0.6;
             }
         }
+    }
+
+    & a.link {
+        color: var(--link-color);
     }
 
     & figure:not(.no-style) {}
@@ -366,5 +372,46 @@ span {
             padding: 2px;
             font-size: 1em;
         }
+    }
+}
+
+.link {
+    padding-right: 1.3em;
+    position: relative;
+    @extend .text-md;
+    font-weight: 500;
+    transition: color $tran;
+
+    @media #{$mouse-device} {
+        &:hover:not(:active) {
+            color: $color-accent-second;
+
+            &::after {
+                transform: translateY(-50%) translateX(0.1em);
+            }
+        }
+    }
+
+    &::after {
+        position: absolute;
+        top: 57%;
+        right: 0;
+        transform: translateY(-50%);
+        display: block;
+        font-size: 0.8em;
+        transition: transform $tran;
+
+        content: "\e904";
+        font-family: 'icomoon' !important;
+        speak: never;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+
+        /* Better Font Rendering =========== */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
     }
 }

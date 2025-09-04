@@ -236,6 +236,12 @@
     text-shadow: 0px 0px 4px rgba(#fff, 0.4);
 }
 
+.text-content-white {
+    --h-color: var(--color-light); 
+    --strong-color: var(--color-light); 
+    --link-color: var(--color-accent-first);
+}
+
 .buttons-group {
     display: flex;
     flex-direction: column;

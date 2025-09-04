@@ -16,7 +16,22 @@
         min-height: 52px;
     }
 
-    &--dark {}
+    &--dark {
+        background-color: $color-dark;
+        color: $color-light;
+        transition: background-color $tran;
+
+        @media #{$mouse-device} {
+            &:hover:not(:active) {
+                background-color: #000;
+            }
+        }
+
+        &.disabled {
+            background-color: #7E7E7E;
+            color: rgba(#fff, 0.6);
+        }
+    }
 
     &--light {
         background-color: $color-light;

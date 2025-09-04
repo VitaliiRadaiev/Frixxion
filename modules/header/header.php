@@ -64,7 +64,7 @@ $header_data = get_field('header', 'options');
 
 <div data-mobile-menu class="mobile-menu fixed z-48 top-0 left-0 w-full opacity-0 invisible translate-y-[50px] h-dvh pt-header-height bg-gradient-second flex flex-col overflow-hidden">
     <img class="absolute left-[10%] bottom-[-110px] z-1 h-auto w-[740px] max-w-none" src="<?= get_template_directory_uri() . '/assets/images/general/light-md.webp' ?>" alt="">
-    <img class="absolute right-[30%] bottom-[-100px] z-1 h-auto w-[400px] max-w-none" src="<?= get_template_directory_uri() . '/assets/images/general/light-sm.webp' ?>" alt="">
+    <img class="absolute right-[30%] bottom-[-100px] z-2 h-auto w-[400px] max-w-none" src="<?= get_template_directory_uri() . '/assets/images/general/light-sm.webp' ?>" alt="">
 
     <div class="container relative z-3 pt-[20px] pb-[40px] h-full overflow-auto flex flex-col gap-[40px]">
         <nav class="my-auto first-child-no-margin">

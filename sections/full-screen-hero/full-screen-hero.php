@@ -14,7 +14,7 @@ if(!$data['section_utils']['section_hide']):
     }?>
 
     <div class="relative z-2 container pt-header-height min-h-dvh flex flex-col lg:justify-center">
-        <div class="pt-[34px] lg:pt-[91px] lg:pb-[100px] first-child-no-margin lg:max-w-[522px] xl:max-w-[762px]">
+        <div class="mb-auto pt-[34px] lg:pt-[91px] lg:pb-[100px] first-child-no-margin lg:max-w-[522px] xl:max-w-[762px]">
             <div class="text-content text-lg text-color-dark-80 font-medium sm:text-center lg:text-start text-light-shadow">
                 <?= $data['text_content'] ?>
             </div>
@@ -29,7 +29,7 @@ if(!$data['section_utils']['section_hide']):
         </div>
         <?php if(check($data['img_mob'])):?>
             <div class="lg:hidden mt-[40px] flex justify-center">
-                <?php get_image($data['img_mob'], 'max-h-[350px]')?>
+                <?php get_image($data['img_mob'], 'max-h-[350px] object-contain')?>
             </div> 
         <?php endif;?>
     </div>

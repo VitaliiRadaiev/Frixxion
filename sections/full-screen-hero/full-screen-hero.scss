@@ -1,6 +1,23 @@
+@use "./utils/abstracts" as *;
+
+.full-scree-hero {
+    position: relative;
+    z-index: 2;
+
+    &+.has-dark-bg {
+        margin-top: -40px;
+        z-index: 1;
+        padding-top: 100px;
+
+        @media (min-width: $mq-lg) {
+            padding-top: 140px;
+        }
+    }
+}
+
 [data-marquee] {
     &.animate {
-        & [data-marquee-container ] {
+        & [data-marquee-container] {
             animation: marquee var(--speed) linear infinite;
         }
     }
@@ -10,6 +27,7 @@
     from {
         transform: translateX(0);
     }
+
     to {
         transform: translateX(-100%);
     }
