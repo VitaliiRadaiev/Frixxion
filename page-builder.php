@@ -6,16 +6,6 @@ get_header();
 <main>
 
     <?php
-    include get_template_directory() . '/sections/full-screen-hero/full-screen-hero.php';
-    
-    include get_template_directory() . '/sections/grey-cards-three-columns/grey-cards-three-columns.php';
-    
-    include get_template_directory() . '/sections/grey-cards-four-columns/grey-cards-four-columns.php';
-    
-    include get_template_directory() . '/sections/grey-number-cards-three-columns/grey-number-cards-three-columns.php';
-    
-    include get_template_directory() . '/sections/grey-number-cards-four-columns/grey-number-cards-four-columns.php';
-
     global $data;
 
     while (have_posts()): the_post();
@@ -33,8 +23,16 @@ get_header();
 
     endwhile;
 
+    include get_template_directory() . '/sections/grey-cards-three-columns/grey-cards-three-columns.php';
+
+    include get_template_directory() . '/sections/grey-cards-four-columns/grey-cards-four-columns.php';
+
+    include get_template_directory() . '/sections/grey-number-cards-three-columns/grey-number-cards-three-columns.php';
+
     ?>
-    
+
+
+
 </main>
 <?php
 

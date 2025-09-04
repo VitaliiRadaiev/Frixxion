@@ -2,6 +2,12 @@
 
 .grey-number-cards-three-columns {
     & .cards-list {
+        & .grey-card-with-number:last-child {
+            &::after {
+                content: none;
+            }
+        }
+
         @media (min-width: $mq-md) and (max-width: $mq-lg-max) {
             & .grey-card-with-number:nth-child(even) {
                 &::after {

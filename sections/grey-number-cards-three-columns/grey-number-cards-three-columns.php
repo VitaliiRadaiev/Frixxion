@@ -36,11 +36,7 @@ $list = [
     [
         'title' => 'Choose Your Channel',
         'text' => 'Select SMS, Email, or WhatsApp — or combine them. Frixxion supports multichannel messaging right from the start'
-    ],
-    [
-        'title' => 'Connect with API or No-Code Tools',
-        'text' => 'Use our developer-friendly API or launch messaging with no-code dashboards. Full SDKs available for any stack'
-    ],
+    ]
 ];
 ?>
 
@@ -52,7 +48,7 @@ $list = [
             </h2>
         </div>
 
-        <div class="cards-list mt-[30px] lg:mt-[50px] grid gap-[10px] md:gap-[20px] md:grid-cols-2 lg:grid-cols-3">
+        <div class="cards-list mt-[30px] lg:mt-[50px] grid gap-[10px] md:gap-[20px] md:grid-cols-2 lg:grid-cols-3 md-and-lg-max:[&>*:last-child:nth-child(odd)]:col-span-2">
             <?php
             foreach ($list as $key => $item) {
                 get_template_part(get_part_path('grey-card-with-number'), null, [

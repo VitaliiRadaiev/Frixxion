@@ -731,6 +731,11 @@ video {
 .w-auto {
   width: auto;
 }
+.w-fit {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
 .w-full {
   width: 100%;
 }
@@ -4391,6 +4396,36 @@ pageid {
   opacity: 0;
 }
 
+[data-marquee].animate [data-marquee-container] {
+  -webkit-animation: marquee var(--speed) linear infinite;
+          animation: marquee var(--speed) linear infinite;
+}
+
+@-webkit-keyframes marquee {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+
+@keyframes marquee {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+.grey-number-cards-three-columns .cards-list .grey-card-with-number:last-child::after {
+  content: none;
+}
+
 .btn {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -4712,6 +4747,10 @@ pageid {
   .md\:p-\[40px\] {
     padding: 40px;
   }
+  .md\:px-\[\] {
+    padding-left: ;
+    padding-right: ;
+  }
   .md\:\[\&_img\]\:aspect-\[1\/0\.539\] img {
     aspect-ratio: 1/0.539;
   }
@@ -4721,8 +4760,8 @@ pageid {
   .grey-number-cards-three-columns .cards-list .grey-card-with-number:nth-child(even)::after {
     content: none;
   }
-  .grey-number-cards-four-columns .cards-list .grey-card-with-number:nth-child(even)::after {
-    content: none;
+  .md-and-lg-max\:\[\&\>\*\:last-child\:nth-child\(odd\)\]\:col-span-2>*:last-child:nth-child(odd) {
+    grid-column: span 2 / span 2;
   }
 }
 
@@ -4822,12 +4861,6 @@ pageid {
   }
 }
 
-@media (min-width: 1024px) and (max-width: 1279.98px) {
-  .grey-number-cards-four-columns .cards-list .grey-card-with-number:nth-child(3n)::after {
-    content: none;
-  }
-}
-
 @media (min-width: 1280px) {
   .container {
     max-width: 1280px;
@@ -4923,9 +4956,6 @@ pageid {
   }
   .gap-y-xl {
     row-gap: 60px;
-  }
-  .grey-number-cards-four-columns .cards-list .grey-card-with-number:nth-child(4n)::after {
-    content: none;
   }
   .xl\:max-w-\[762px\] {
     max-width: 762px;

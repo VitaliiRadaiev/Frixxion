@@ -126,3 +126,8 @@ function render_menu_link($menu, $classes = '', $attr = '')
   </a>
 <?php
 }
+
+function get_section_id($data)
+{
+  return check($data['section_utils']['section_id']) ? 'id="' . $data['section_utils']['section_id'] . '"' : '';
+}

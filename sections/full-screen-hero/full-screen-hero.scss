@@ -1,0 +1,16 @@
+[data-marquee] {
+    &.animate {
+        & [data-marquee-container ] {
+            animation: marquee var(--speed) linear infinite;
+        }
+    }
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
