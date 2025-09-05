@@ -1,7 +1,7 @@
 <section class="cta-two-columns-image-right section-space-top">
     <div class="container">
-        <div class="grid gap-[40px] lg:grid-cols-[1fr_48.2%] bg-color-accent-first rounded-[10px] p-[10px] md:p-[30px] lg:p-[10px]">
-            <div class="md-max:pt-[30px] lg:py-[80px] lg:pl-[35px] lg:self-center">
+        <div class="grid gap-[40px] lg:gap-[50px] lg:grid-cols-2 bg-color-accent-first rounded-[10px] p-[10px] md:p-[30px] lg:p-[10px]">
+            <div class="md-max:pt-[30px] lg-max:px-[10px] lg:py-[80px] lg:pl-[35px] lg:self-center">
                 <div style="--h-color: var(--color-dark); --strong-color: var(--color-light);" class="text-content text-white lg:max-w-[590px] 4xl:max-w-[690px]">
                     <h2>
                         Ready to start messaging smarter?

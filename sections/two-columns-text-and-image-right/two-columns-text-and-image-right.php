@@ -7,7 +7,7 @@
                 About service
             </h2>
         </div>
-        <div class="mt-[30px] lg:mt-[50px] grid gap-[30px] lg:gap-[52px] lg:grid-cols-[1fr_48%]">
+        <div class="mt-[30px] lg:mt-[50px] grid gap-[30px] lg:gap-[52px] lg:grid-cols-2">
             <div class="first-child-no-margin lg:py-[75px] self-center">
                 <div class="text-content text-content-white text-md text-white/80 lg:max-w-[590px] 4xl:max-w-[690px]">
                     <h3>Reach Your Users. Instantly. Anywhere.</h3>

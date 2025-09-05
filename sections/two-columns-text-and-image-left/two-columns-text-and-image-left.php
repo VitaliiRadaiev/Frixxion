@@ -7,7 +7,7 @@
                 About service
             </h2>
         </div>
-        <div class="mt-[30px] lg:mt-[50px] grid gap-[30px] lg:gap-[52px] lg:grid-cols-[48%_1fr]">
+        <div class="mt-[30px] lg:mt-[50px] grid gap-[30px] lg:gap-[52px] lg:grid-cols-2">
             <div class="relative overflow-hidden rounded-[10px] aspect-[1/0.7] sm:aspect-[1/0.54] lg:aspect-auto lg:min-h-[320px] bg-gradient-second">
                 <img class="ibg" src="<?= get_template_directory_uri() . '/assets/images/temp/image-1.jpg' ?>" alt="">
             </div>

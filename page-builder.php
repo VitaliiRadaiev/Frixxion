@@ -36,6 +36,8 @@ get_header();
     include get_template_directory() . '/sections/cta-two-columns-image-right/cta-two-columns-image-right.php';
     
     include get_template_directory() . '/sections/cta-two-columns-image-left/cta-two-columns-image-left.php';
+    
+    include get_template_directory() . '/sections/two-columns-two-rows/two-columns-two-rows.php';
 
 
     ?>

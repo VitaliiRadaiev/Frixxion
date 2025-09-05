@@ -1,7 +1,30 @@
 @use "./utils/abstracts" as *;
 
+.social {
+    & svg {
+        height: 22px;
+        width: auto;
+    }
+}
+
 .social--dark {
     & a {
         background-color: $color-dark;
+        color: #fff;
+    }
+}
+
+.social--light {
+    & a {
+        background-color: rgba(#fff, 0.2);
+        transition: background-color $tran;
+        color: #fff;
+
+        @media #{$mouse-device} {
+            &:hover {
+                background-color: #fff;
+                color: $color-dark !important;
+            }
+        }
     }
 }
