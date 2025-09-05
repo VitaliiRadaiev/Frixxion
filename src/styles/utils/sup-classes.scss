@@ -216,6 +216,22 @@
     background-image: $gradient-second;
 }
 
+.text-accent-first {
+    color: $color-accent-first;
+}
+.text-accent-second {
+    color: $color-accent-second;
+}
+.text-accent-third {
+    color: $color-accent-third;
+}
+.text-dark {
+    color: $color-dark;
+}
+.text-light {
+    color: $color-light;
+}
+
 .text-gradient-first {
     background: $gradient-first;
     background-clip: text;

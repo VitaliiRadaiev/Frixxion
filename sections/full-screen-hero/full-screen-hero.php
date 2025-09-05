@@ -2,19 +2,17 @@
 
 if(!$data['section_utils']['section_hide']):
 ?>
-<script>
-    console.log( <?= json_encode($data); ?> );
-</script>
+
 <section <?= get_section_id($data) ?> class="full-scree-hero relative overflow-hidden bg-gradient-second rounded-b-[20px]">
-    <img class="lg:hidden absolute left-[10%] bottom-[-110px] z-1 h-auto w-[740px] max-w-none" src="<?= get_template_directory_uri() . '/assets/images/general/light-md.webp' ?>" alt="">
-    <img class="lg:hidden absolute right-[30%] bottom-[-100px] z-1 h-auto w-[400px] max-w-none" src="<?= get_template_directory_uri() . '/assets/images/general/light-sm.webp' ?>" alt="">
+    <img class="lg:hidden absolute left-[10%] bottom-[-110px] z-1 h-auto w-[740px] max-w-none" src="<?= get_template_directory_uri() . '/assets/images/general/light-md.webp' ?>" alt="" role="presentation">
+    <img class="lg:hidden absolute right-[30%] bottom-[-100px] z-1 h-auto w-[400px] max-w-none" src="<?= get_template_directory_uri() . '/assets/images/general/light-sm.webp' ?>" alt="" role="presentation">
 
     <?php if(check($data['img_desk'])){
         get_image($data['img_desk'], 'lg-max:hidden absolute z-1 top-0 right-0 h-full w-auto max-w-none object-right-top object-cover');
     }?>
 
     <div class="relative z-2 container pt-header-height min-h-dvh flex flex-col lg:justify-center">
-        <div class="mb-auto pt-[34px] lg:pt-[91px] lg:pb-[100px] first-child-no-margin lg:max-w-[522px] xl:max-w-[762px]">
+        <div class="mb-auto lg:my-auto pt-[34px] lg:pt-[91px] lg:pb-[100px] first-child-no-margin lg:max-w-[522px] xl:max-w-[762px]">
             <div class="text-content text-lg text-color-dark-80 font-medium sm:text-center lg:text-start text-light-shadow">
                 <?= $data['text_content'] ?>
             </div>

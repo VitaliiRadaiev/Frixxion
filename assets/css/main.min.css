@@ -4089,6 +4089,26 @@ pageid {
   background-image: linear-gradient(270deg, #ffd5a8 0%, #ffdfba 19.9%, #ffebe8 100%);
 }
 
+.text-accent-first {
+  color: #fb7d20;
+}
+
+.text-accent-second {
+  color: #fa2527;
+}
+
+.text-accent-third {
+  color: #fcb503;
+}
+
+.text-dark {
+  color: #191a1d;
+}
+
+.text-light {
+  color: #ffffff;
+}
+
 .text-gradient-first {
   background: linear-gradient(105deg, #fb7d20 0%, #fa2527 100%);
   background-clip: text;
@@ -4991,6 +5011,10 @@ pageid {
         -ms-flex-order: 2;
             order: 2;
   }
+  .lg\:my-auto {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
   .lg\:mt-\[40px\] {
     margin-top: 40px;
   }
@@ -5097,11 +5121,11 @@ pageid {
   .lg\:pl-\[35px\] {
     padding-left: 35px;
   }
-  .lg\:pt-\[91px\] {
-    padding-top: 91px;
-  }
   .lg\:pr-\[35px\] {
     padding-right: 35px;
+  }
+  .lg\:pt-\[91px\] {
+    padding-top: 91px;
   }
   .lg\:text-start {
     text-align: start;

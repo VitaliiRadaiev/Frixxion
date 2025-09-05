@@ -1,0 +1,89 @@
+.mce-content-body .text-h1,
+.mce-content-body h1 {
+    font-size: 80px;
+    line-height: 1em;
+    font-weight: 700;
+}
+
+.mce-content-body .text-h2,
+.mce-content-body h2 {
+    font-size: 50px;
+    line-height: 1em;
+    font-weight: 700;
+}
+
+.mce-content-body .text-h3,
+.mce-content-body h3 {
+    font-size: 32px;
+    line-height: 1.2em;
+    font-weight: 700;
+}
+
+.mce-content-body .text-h4,
+.mce-content-body h4 {
+    font-size: 20px;
+    line-height: 1.3em;
+    font-weight: 700;
+}
+
+.mce-content-body .text-h5,
+.mce-content-body h5 {
+    font-size: 18px;
+    line-height: 1.3em;
+    font-weight: 700;
+}
+
+.text-accent-first {
+    color: #fb7d20;
+}
+
+.text-accent-second {
+    color: #fa2527;
+}
+
+.text-accent-third {
+    color: #fcb503;
+}
+
+.text-dark {
+    color: #191a1d;
+}
+
+.text-light {
+    color: #fff;
+    text-shadow: 0px 0px 1px black;
+}
+
+.text-gradient-first {
+    background: linear-gradient(105deg, #fb7d20 0%, #fa2527 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
+}
+
+.text-gradient-second {
+    background: linear-gradient(270deg, #ffd5a8 0%, #ffdfba 19.9%, #ffebe8 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
+}
+
+.link {
+    padding-right: 1.3em !important;
+    position: relative;
+    font-weight: 700 !important;
+    color: #fb7d20 !important;
+}
+
+.link::after {
+    position: absolute;
+    top: 57%;
+    right: 0;
+    transform: translateY(-50%);
+    display: block;
+    font-size: 0.8em;
+    content: ">";
+    font-weight: bold;
+}
