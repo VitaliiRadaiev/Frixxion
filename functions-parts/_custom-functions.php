@@ -42,11 +42,11 @@ function shareTwitter($linkToShare)
   return 'https://twitter.com/intent/tweet?url=' . urlencode($linkToShare);
 }
 
-function get_image($image_id, $classes = '', $echo = true, $size = 'large')
+function get_image($image_id, $classes = '', $echo = true, $size = 'large', $attr = [])
 // thumbnail, medium, large, full
 {
   if ($image_id) {
-    $image_html = wp_get_attachment_image($image_id, $size, false, array('class' => $classes));
+    $image_html = wp_get_attachment_image($image_id, $size, false, array('class' => $classes, ...$attr));
     if ($echo) {
       echo $image_html;
     } else {

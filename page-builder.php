@@ -22,28 +22,8 @@ get_header();
 
 
     endwhile;
-
-    include get_template_directory() . '/sections/two-columns-text-and-image-left/two-columns-text-and-image-left.php';
-
-    include get_template_directory() . '/sections/grey-cards-three-columns/grey-cards-three-columns.php';
-
-    include get_template_directory() . '/sections/grey-cards-four-columns/grey-cards-four-columns.php';
-
-    include get_template_directory() . '/sections/grey-number-cards-three-columns/grey-number-cards-three-columns.php';
-
-    include get_template_directory() . '/sections/two-columns-text-and-image-right/two-columns-text-and-image-right.php';
-    
-    include get_template_directory() . '/sections/cta-two-columns-image-right/cta-two-columns-image-right.php';
-    
-    include get_template_directory() . '/sections/cta-two-columns-image-left/cta-two-columns-image-left.php';
-    
-    include get_template_directory() . '/sections/two-columns-two-rows/two-columns-two-rows.php';
-
-
     ?>
-
-
-
+    
 </main>
 <?php
 

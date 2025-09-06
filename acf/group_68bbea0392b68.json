@@ -1,13 +1,13 @@
 {
-    "key": "group_68b7d12ae7736",
-    "title": "[template part] social",
+    "key": "group_68bbea0392b68",
+    "title": "[template part] section-head",
     "fields": [
         {
-            "key": "field_68b7d12b4eb21",
-            "label": "Social list",
-            "name": "social_list",
+            "key": "field_68bbea049713d",
+            "label": "Section head",
+            "name": "section_head",
             "aria-label": "",
-            "type": "repeater",
+            "type": "group",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -16,20 +16,14 @@
                 "class": "",
                 "id": ""
             },
-            "layout": "table",
-            "pagination": 0,
-            "min": 0,
-            "max": 0,
-            "collapsed": "",
-            "button_label": "Add Row",
-            "rows_per_page": 20,
+            "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_68b7d1674eb22",
+                    "key": "field_68bbea579713e",
                     "label": "",
-                    "name": "url",
+                    "name": "text",
                     "aria-label": "",
-                    "type": "url",
+                    "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -40,8 +34,10 @@
                     },
                     "default_value": "",
                     "allow_in_bindings": 0,
-                    "placeholder": "",
-                    "parent_repeater": "field_68b7d12b4eb21"
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
                 }
             ]
         }
@@ -50,8 +46,7 @@
         [
             {
                 "param": "block",
-                "operator": "==",
-                "value": ""
+                "operator": "=="
             }
         ]
     ],
@@ -64,5 +59,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1757145894
+    "modified": 1757145884
 }

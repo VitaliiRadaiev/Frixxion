@@ -913,6 +913,9 @@ video {
 .overflow-hidden {
   overflow: hidden;
 }
+.whitespace-pre-line {
+  white-space: pre-line;
+}
 .rounded-\[10px\] {
   border-radius: 10px;
 }
@@ -5108,6 +5111,9 @@ pageid {
   }
   .lg\:min-h-\[320px\] {
     min-height: 320px;
+  }
+  .lg\:min-h-\[442px\] {
+    min-height: 442px;
   }
   .lg\:max-w-\[244px\] {
     max-width: 244px;

@@ -7,8 +7,8 @@ if(!$data['section_utils']['section_hide']):
     <img class="lg:hidden absolute left-[10%] bottom-[-110px] z-1 h-auto w-[740px] max-w-none" src="<?= get_template_directory_uri() . '/assets/images/general/light-md.webp' ?>" alt="" role="presentation">
     <img class="lg:hidden absolute right-[30%] bottom-[-100px] z-1 h-auto w-[400px] max-w-none" src="<?= get_template_directory_uri() . '/assets/images/general/light-sm.webp' ?>" alt="" role="presentation">
 
-    <?php if(check($data['img_desk'])){
-        get_image($data['img_desk'], 'lg-max:hidden absolute z-1 top-0 right-0 h-full w-auto max-w-none object-right-top object-cover');
+    <?php if(check($data['image']) && check($data['image']['desk'])){
+        get_image($data['image']['desk'], 'lg-max:hidden absolute z-1 top-0 right-0 h-full w-auto max-w-none object-right-top object-cover');
     }?>
 
     <div class="relative z-2 container pt-header-height min-h-dvh flex flex-col lg:justify-center">
@@ -16,18 +16,16 @@ if(!$data['section_utils']['section_hide']):
             <div class="text-content text-lg text-color-dark-80 font-medium sm:text-center lg:text-start text-light-shadow">
                 <?= $data['text_content'] ?>
             </div>
-            <?php if(check($data['buttons'])):?>
-                <div class="buttons-group">
-                    <?php get_template_part(get_part_path('buttons-group'), null, [
+            <?php if(check($data['buttons'])) {
+                get_template_part(get_part_path('buttons-group'), null, [
                         'classes' => 'mt-[40px] lg:mt-[60px] sm:justify-center lg:justify-start',
                         'buttons' => $data['buttons']
-                    ])?>
-                </div>
-            <?php endif;?>
+                ]);
+            }?>
         </div>
-        <?php if(check($data['img_mob'])):?>
+        <?php if(check($data['image']) && check($data['image']['mob'])):?>
             <div class="lg:hidden mt-[40px] flex justify-center">
-                <?php get_image($data['img_mob'], 'max-h-[350px] object-contain')?>
+                <?php get_image($data['image']['mob'], 'max-h-[350px] object-contain')?>
             </div> 
         <?php endif;?>
     </div>

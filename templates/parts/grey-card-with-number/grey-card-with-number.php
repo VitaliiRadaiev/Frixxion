@@ -1,8 +1,12 @@
 <?php
 $classes = $args['classes'] ?? '';
 $num = $args['num'] ?? null;
-$title = $args['title'] ?? '';
-$text = $args['text'] ?? '';
+$card_data = $args['card_data'] ?? null;
+
+$card_data = wp_parse_args($card_data, [
+    'title' => '',
+    'text' => '',
+]);
 ?>
 
 <div class="grey-card-with-number rounded-[10px] p-[16px] md:p-[20px] bg-color-dark-20 <?= $classes ?>">
@@ -13,16 +17,13 @@ $text = $args['text'] ?? '';
             </div>
         <?php endif; ?>
 
-        <?php if (check($title)): ?>
+        <?php if (check($card_data['title'])): ?>
             <div class="h4 text-color-dark font-bold self-center">
-                <?= $title ?>
+                <?= $card_data['title'] ?>
             </div>
         <?php endif; ?>
     </div>
-    <?php if (check($text)): ?>
-        <div class="relative z-2 mt-[10px] md:mt-[10px] text-md text-content text-color-dark-80">
-            <?= $text ?>
-        </div>
+    <?php if (check($card_data['text'])): ?>
+        <div class="relative z-2 mt-[10px] md:mt-[10px] text-md text-content text-color-dark-80 whitespace-pre-line"><?= $card_data['text'] ?></div>
     <?php endif; ?>
-    <div class=""></div>
 </div>

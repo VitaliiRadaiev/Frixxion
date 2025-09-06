@@ -97,8 +97,6 @@ if (function_exists('add_theme_support')) {
 register_nav_menus(
     array(
         'Header menu' => 'Header menu',
-        'Footer menu' => 'Footer menu',
-        'Footer sub menu' => 'Footer sub menu'
     )
 );
 

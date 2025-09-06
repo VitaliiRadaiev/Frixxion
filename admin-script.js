@@ -12,7 +12,7 @@ document.addEventListener('mouseenter', function(event) {
 
     var sectionName = element.getAttribute('data-layout');
     if (sectionName) {
-        var imageUrl = '/wp-content/themes/xevel/sections/screenshots/' + sectionName + '.jpg';
+        var imageUrl = '/wp-content/themes/frixxion/sections/sections-previews/' + sectionName + '.jpg';
         var tooltip = document.createElement('div');
         tooltip.className = 'custom-tooltip';
         var img = document.createElement('img');
