@@ -10,12 +10,12 @@ document.addEventListener('mouseenter', function(event) {
         return;
     }
 
-    var sectionName = element.getAttribute('data-layout');
+    const sectionName = element.getAttribute('data-layout');
     if (sectionName) {
-        var imageUrl = '/wp-content/themes/frixxion/sections/sections-previews/' + sectionName + '.jpg';
-        var tooltip = document.createElement('div');
+        const imageUrl = '/wp-content/themes/frixxion/sections/sections-previews/' + sectionName + '.jpg';
+        const tooltip = document.createElement('div');
         tooltip.className = 'custom-tooltip';
-        var img = document.createElement('img');
+        const img = document.createElement('img');
         img.src = imageUrl;
         img.alt = sectionName + ' screenshot';
         img.style.width = '100%';
@@ -24,7 +24,6 @@ document.addEventListener('mouseenter', function(event) {
         document.body.appendChild(tooltip);
 
         img.onload = function() {
-            var rect = element.getBoundingClientRect();
             tooltip.style.width = '600px';
             tooltip.style.height = 'auto';
             tooltip.style.position = 'fixed';

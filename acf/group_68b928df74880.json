@@ -304,6 +304,38 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_68be652c907ce": {
+                    "key": "layout_68be652c907ce",
+                    "name": "table",
+                    "label": "[section] table",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_68be652c907d0",
+                            "label": "[section] table",
+                            "name": "table",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_68be64d9d32c1"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -329,5 +361,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1757148427
+    "modified": 1757308229
 }
