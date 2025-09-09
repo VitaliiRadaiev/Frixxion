@@ -13,6 +13,15 @@
   <link rel="manifest" href="<?= get_template_directory_uri() ?>/site.webmanifest" />
 
   <?php wp_head(); ?>
+  
+  <!-- Скріпт для автоперезавантаження сторінки, видалить на релізі -->
+  <script>
+    const ws = new WebSocket("ws://localhost:35729");
+    ws.onmessage = (msg) => {
+      if (msg.data === "reload") location.reload();
+    };
+  </script>
+   <!-- Скріпт для автоперезавантаження сторінки, видалить на релізі -->
 </head>
 
 <body <?php body_class('menu-closed'); ?>>

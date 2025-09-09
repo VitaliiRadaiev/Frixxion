@@ -439,7 +439,7 @@ function createCustomSliderPagination($container) {
             initedSwiper = swiper;
             let paginationHtml = '';
             const realCurrent = current - 1;
-            const shiftStep = 16;
+            const shiftStep = 20; // dot width size + gap-x size
             const isShifting = total > 3;
 
             bullets.classList.add('_animate');

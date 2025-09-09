@@ -336,6 +336,70 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_68c05719e15ff": {
+                    "key": "layout_68c05719e15ff",
+                    "name": "team",
+                    "label": "[section] team",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_68c05728e1602",
+                            "label": "[section] team",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_68c0562432925"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_68c064d146534": {
+                    "key": "layout_68c064d146534",
+                    "name": "testimonials",
+                    "label": "[section] testimonials",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_68c064d946537",
+                            "label": "[section] testimonials",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_68c0637c30b5d"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -350,6 +414,13 @@
                 "operator": "==",
                 "value": "page-builder.php"
             }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "default"
+            }
         ]
     ],
     "menu_order": 0,
@@ -361,5 +432,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1757308229
+    "modified": 1757439222
 }

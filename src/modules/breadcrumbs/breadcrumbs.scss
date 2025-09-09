@@ -1,49 +1,56 @@
 @use "./utils/abstracts" as *;
-@use './typography.scss';
+@use "./typography.scss";
 
 .breadcrumbs {
-    @extend .text-xs;
+  @extend .text-xs; 
 
-    & a {
-        color: inherit;
-        transition: opacity $tran;
-        margin-right: 9px;
+  & a {
+    color: inherit;
+    transition: opacity $tran;
+    margin-right: 9px;
 
-        &::after {
-            content: '';
-            display: inline-block;
-            height: 6px;
-            width: 6px;
-            border-radius: 1px;
-            background-color: currentColor;
-            margin-left: 13px;
-            margin-bottom: 1px;
-        }
+    &::after {
+      content: "\e904";
+      display: inline-block;
+      margin-left: 1em;
+      font-size: 0.6em;
+      font-family: "icomoon" !important;
+      speak: never;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
 
-        @media #{$mouse-device} {
-            &:hover {
-                opacity: 0.7;
-            }
-        }
+      /* Better Font Rendering =========== */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
 
-    & .last {
-        opacity: 0.5;
+    @media #{$mouse-device} {
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  & .last {
+    opacity: 0.5;
+  }
+
+  & .separator {
+    display: none;
+  }
+
+  & + .section-space-top {
+    margin-top: 24px;
+
+    @media (min-width: $mq-md) {
+      margin-top: 34px;
     }
 
-    & .separator {
-        display: none;
+    @media (min-width: $mq-lg) {
+      margin-top: 56px;
     }
-
-    &+.section-space-top {
-        margin-top: 24px;
-
-        @media (min-width: $mq-md) {
-            margin-top: 34px;
-        }
-
-        @media (min-width: $mq-lg) {
-            margin-top: 56px;
-        }
-    }
+  }
 }

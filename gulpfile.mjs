@@ -11,9 +11,12 @@ import sortMediaQueries from 'postcss-sort-media-queries';
 import plumber from "gulp-plumber";
 import notify from "gulp-notify";
 import tailwindcss from "tailwindcss";
-import cssnano from "cssnano"; // для минимизации CSS
-import terser from "gulp-terser"; // для минимизации JS
-import rename from 'gulp-rename'; // для переименования файлов
+import cssnano from "cssnano";
+import terser from "gulp-terser";
+import rename from 'gulp-rename'; 
+import { WebSocketServer } from 'ws';
+
+const wss = new WebSocketServer({ port: 35729 });
 
 const project_name = "assets";
 const src_folder = "src";
@@ -31,11 +34,20 @@ const path = {
     },
     watch: {
         html: ["./*.php", "./sections/**/*.php", "./modules/**/*.php", "./templates/**/*.php"],
-        js: [src_folder + "/js/**/*.js", "./sections/**/*.js", "./modules/**/*.js", "./templates/**/*.js"],
-        css: [src_folder + "/styles/**/*.scss", "./sections/**/*.scss", "./modules/**/*.scss", "./templates/**/*.scss"]
+        js: [src_folder + "/js/**/*.js", "./sections/**/*.js", "./modules/**/*.js", "./templates/**/*.js", "./src/modules/**/*.js"],
+        css: [src_folder + "/styles/**/*.scss", "./sections/**/*.scss", "./modules/**/*.scss", "./templates/**/*.scss", "./src/modules/**/*.scss"]
     },
     clean: [project_name + "/js/", project_name + "/css/"]
 };
+
+function reload(done) {
+  wss.clients.forEach(client => {
+    if (client.readyState === WebSocket.OPEN) {
+      client.send("reload");
+    }
+  });
+  done();
+}
 
 export function clean() {
     return deleteAsync(path.clean);
@@ -91,9 +103,9 @@ export function js() {
 
 // Наблюдение за файлами
 export function watch() {
-    gulp.watch([path.watch.html], css);
-    gulp.watch([path.watch.css], css);
-    gulp.watch([path.watch.js], js);
+    gulp.watch([path.watch.html], gulp.series(css, reload));
+    gulp.watch([path.watch.css], gulp.series(css, reload));
+    gulp.watch([path.watch.js], gulp.series(js, reload));
 }
 
 // Задача для сборки

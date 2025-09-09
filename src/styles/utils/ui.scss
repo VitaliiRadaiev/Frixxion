@@ -1,50 +1,8 @@
 @use "./utils/abstracts" as *;
 @use "./typography.scss";
 
-.slider-bullets {
-    display: flex;
-    gap: 10px;
-
-    & .swiper-pagination-bullet {
-        margin: 0;
-        width: auto;
-        height: 5px;
-        flex: 1 1 auto;
-        border-radius: 0;
-        position: relative;
-        background-color: transparent;
-        opacity: 1;
-
-        &::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 0;
-            transform: translateY(-50%);
-            width: 100%;
-            height: 1px;
-            transition: background-color $tran, color $tran;
-            background-color: rgba(#fff, 0.4);
-        }
-
-        &:not(.swiper-pagination-bullet-active) {
-            cursor: pointer;
-        }
-
-        @media #{$mouse-device} {
-            &:hover:not(.swiper-pagination-bullet-active)::before {
-                background-color: rgba(#fff, 0.7);
-            }
-        }
-
-        &.swiper-pagination-bullet-active::before {
-            background-color: #fff;
-        }
-    }
-}
-
 .slider-bullets-dots {
-    max-width: 42px;
+    max-width: 50px;
     width: auto;
     overflow: hidden;
     display: inline-block;
@@ -53,7 +11,7 @@
 .bullets-wrapper {
     display: flex;
     box-sizing: content-box;
-    gap: 6px;
+    gap: 10px;
     transition: transform $tran .25s;
 }
 
@@ -64,6 +22,7 @@
     background-color: currentColor;
     opacity: 0.6;
     cursor: pointer;
+    border-radius: 20px;
     transform: scale(0.6);
 
     &.active {
