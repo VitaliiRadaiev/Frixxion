@@ -49,6 +49,38 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_68c26b3184fe0": {
+                    "key": "layout_68c26b3184fe0",
+                    "name": "hero",
+                    "label": "[section] hero",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_68c26b3984fe3",
+                            "label": "[section] hero",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_68c26ae83af5f"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_68bbeb6438236": {
                     "key": "layout_68bbeb6438236",
                     "name": "grey-cards-three-columns",
@@ -400,6 +432,70 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_68c119171523c": {
+                    "key": "layout_68c119171523c",
+                    "name": "vacancies-slider",
+                    "label": "[sections] vacancies-slider",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_68c1192b1523f",
+                            "label": "[sections] vacancies-slider",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_68c118c2d503f"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_68c25b9dbcdef": {
+                    "key": "layout_68c25b9dbcdef",
+                    "name": "vacancies-grid",
+                    "label": "[section] vacancies-grid",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_68c25bbebcdf2",
+                            "label": "[section] vacancies-grid",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_68c25af5eec6d"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -432,5 +528,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1757439222
+    "modified": 1757571914
 }

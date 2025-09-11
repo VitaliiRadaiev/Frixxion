@@ -4,6 +4,7 @@
 
 @@include('./utils.js')
 @@include('./scripts.js')
+@@include('../modules/loader/loader.js')
 
 window.addEventListener("DOMContentLoaded", () => {
     document.body.classList.add('page-loaded');
@@ -33,6 +34,8 @@ window.addEventListener("DOMContentLoaded", () => {
     initScrollContainers();
     initSetElSizeVariables();
     initDetectIsDoucementScrolling();
+
+    @@include('../plugins/popup/popup.js')
 
     // sections
     @@include('../../sections/full-screen-hero/full-screen-hero.js')

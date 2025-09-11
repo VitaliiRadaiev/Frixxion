@@ -1,3 +1,13 @@
+.loader {
+    position: absolute;
+    inset: -10px;
+    border-radius: 10px;
+    background-color: rgba(#fff, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .lds-roller,
 .lds-roller div,
 .lds-roller div:after {

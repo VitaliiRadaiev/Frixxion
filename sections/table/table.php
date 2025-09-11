@@ -14,7 +14,7 @@ if (!$data['section_utils']['section_hide']):
         true
     );
 ?>
-    <section class="table-section has-dark-bg section-space-top relative rounded-[20px] py-[60px] lg:py-[100px] overflow-hidden">
+    <section <?= get_section_id($data) ?> class="table-section has-dark-bg section-space-top relative rounded-[20px] py-[60px] lg:py-[100px] overflow-hidden">
         <?php get_template_part(get_part_path('dark-bg')) ?>
 
         <div class="container relative z-2">

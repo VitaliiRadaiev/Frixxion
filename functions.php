@@ -1,6 +1,6 @@
 <?php
 // Functions parts
-//include_once 'functions-parts/Mobile_Detect.php';
+include_once 'functions-parts/Mobile_Detect.php';
 include_once 'functions-parts/_assets.php';
 include_once 'functions-parts/_post-types-registration.php';
 include_once 'functions-parts/_taxonomies-registration.php';

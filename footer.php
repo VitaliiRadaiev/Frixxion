@@ -2,6 +2,7 @@
 
 <?php wp_footer(); ?>
 
+<?php do_action( 'include_testimonial_popup' ); ?>
 </body>
 
 </html>

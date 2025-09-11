@@ -1,0 +1,13 @@
+#popup-full-review {
+    & [data-text-container] {
+        max-height: none !important;
+    }
+
+    & .b-shadow {
+        display: none !important;
+    }
+
+    & [data-action="show-all"] {
+        display: none !important;
+    }
+}

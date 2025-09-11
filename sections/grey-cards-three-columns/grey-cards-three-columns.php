@@ -1,7 +1,7 @@
 <?php
 if (!$data['section_utils']['section_hide']):
 ?>
-    <section class="grey-cards-three-columns section-space-top">
+    <section <?= get_section_id($data) ?> class="grey-cards-three-columns section-space-top">
         <div class="container">
             <?php get_template_part(get_part_path('section-head'), null, [
                 'classes' => 'text-color-dark-80',

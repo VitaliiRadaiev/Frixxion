@@ -1,7 +1,7 @@
 <?php
 if (!$data['section_utils']['section_hide']):
 ?>
-    <section class="cta-two-columns-image-left section-space-top">
+    <section <?= get_section_id($data) ?> class="cta-two-columns-image-left section-space-top">
         <div class="container">
             <div class="grid gap-[40px] lg:gap-[50px] lg:grid-cols-2 bg-color-accent-first rounded-[10px] p-[10px] md:p-[30px] lg:p-[10px]">
                 <div class="lg:order-2 md-max:pt-[30px] lg-max:px-[10px] lg:py-[80px] lg:pr-[35px] lg:self-center first-child-no-margin">
