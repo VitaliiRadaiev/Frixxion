@@ -43,5 +43,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
     // modules
     @@include('../../modules/header/header.js')
+    @@include('../modules/form-fields/form-fields.js')
     // /= modules
 }); 

@@ -127,6 +127,7 @@ span {
   --h-color: #{$color-dark};
   --strong-color: #{$color-dark};
   --link-color: var(--color-accent-first);
+  --ul-dots: currentColor;
 
   & > *:last-child {
     margin-bottom: 0 !important;
@@ -222,10 +223,10 @@ span {
   & ul:not(.no-style) {
     & > li {
       position: relative;
-      padding-left: 1.06em;
+      padding-left: 18px;
 
       &:not(:last-child) {
-        margin-bottom: 0.53em;
+        margin-bottom: 10px;
       }
 
       & > *:last-child {
@@ -238,10 +239,11 @@ span {
         top: calc(var(--line-height) / 2);
         left: 0;
         transform: translateY(-50%);
-        height: 6px;
-        width: 6px;
-        border-radius: 1px;
+        height: 8px;
+        width: 8px;
+        border-radius: 20px;
         display: block;
+        background: var(--ul-dots);
       }
     }
   }
@@ -262,6 +264,10 @@ span {
     }
   }
 
+  & a {
+    transition: color $tran, text-decoration $tran;
+  }
+
   & p a:not(.link),
   li a:not(.link) {
     text-decoration-line: underline;
@@ -270,7 +276,16 @@ span {
 
     @media #{$mouse-device} {
       &:hover {
-        opacity: 0.6;
+        color: $color-accent-second;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  & a:not(.link) {
+    @media #{$mouse-device} {
+      &:hover {
+        color: $color-accent-second;
       }
     }
   }

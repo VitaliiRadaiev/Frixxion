@@ -28,3 +28,18 @@
         }
     }
 }
+
+.social--white {
+    & a {
+        background-color: #fff;
+        transition: background-color $tran;
+        color: $color-dark;
+
+        @media #{$mouse-device} {
+            &:hover {
+                background-color: $color-dark;
+                color: $color-light;
+            }
+        }
+    }
+}

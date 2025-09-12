@@ -1,0 +1,30 @@
+@use "./utils/abstracts" as *;
+
+.contacn-form-wrapper {
+& .form-fields {
+    @media (min-width: $mq-lg) {
+        grid-template-columns: 1fr 1fr;
+
+        & > *:last-child {
+            grid-column: span 2 / span 2;
+        }
+    }
+}
+
+  & .btn {
+    background-color: $color-dark;
+    color: $color-light;
+    transition: background-color $tran;
+
+    @media #{$mouse-device} {
+      &:hover:not(:active) {
+        background-color: #000;
+      }
+    }
+
+    &.disabled {
+      background-color: #7e7e7e;
+      color: rgba(#fff, 0.6);
+    }
+  }
+}

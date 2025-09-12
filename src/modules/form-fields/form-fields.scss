@@ -1,76 +1,137 @@
 @use "./utils/abstracts" as *;
 
 .input {
-    appearance: none;
-    display: flex;
-    align-items: center;
-    border-radius: 3px;
-    padding: 8px 16px;
-    background-color: #fff;
-    font-size: 16px;
-    line-height: 1.4em;
-    color: #000;
-    min-height: 50px;
-    width: 100%;
-    outline: none;
+  appearance: none;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  padding: 8px 20px;
+  background-color: #fff;
+  font-size: rem(15px);
+  line-height: 1.4em;
+  color: $color-dark;
+  min-height: 50px;
+  width: 100%;
+  outline: none;
+
+  @media (min-width: $mq-lg) {
+    font-size: rem(16px);
+  }
+
+  &::placeholder {
+    transition: color $tran;
+    color: $color-dark-80;
+    opacity: 0.6;
+  }
+
+  @media #{$mouse-device} {
+    &:hover {
+      &::placeholder {
+        color: $color-dark;
+      }
+    }
+  }
+
+  &:focus-visible {
+    background-color: #f0f0f0;
+  }
+
+  &[disabled] {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
+  &.wpcf7-not-valid,
+  &.not-valid {
+    outline: solid 1px $color-error;
+    color: $color-error;
 
     &::placeholder {
-        transition: color $tran;
-        color: rgba(#000, 0.5);
+      color: $color-error;
+      opacity: 1;
     }
+  }
+}
 
-    @media #{$mouse-device} {
-        &:hover {
-            &::placeholder {
-                color: rgba(#000, 0.7);
-            }
-        }
-    }
+.textarea {
+  appearance: none;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  padding: 15px 20px;
+  background-color: #fff;
+  font-size: rem(15px);
+  line-height: 1.4em;
+  color: $color-dark;
+  min-height: 88px;
+  width: 100%;
+  outline: none;
+  resize: none;
+  overflow: hidden;
 
-    &:focus-visible {
-        background-color: #f0f0f0;
-    }
+  @media (min-width: $mq-lg) {
+    font-size: rem(16px);
+  }
 
-    &[disabled] {
-        pointer-events: none;
-        opacity: 0.5;
-    }
+  &::placeholder {
+    transition: color $tran;
+    color: $color-dark-80;
+    opacity: 0.6;
+  }
 
-    &.wpcf7-not-valid,
-    &.not-valid {
-        outline: solid 1px $color-error;
+  @media #{$mouse-device} {
+    &:hover {
+      &::placeholder {
+        color: $color-dark;
+      }
     }
+  }
+
+  &:focus-visible {
+    background-color: #f0f0f0;
+  }
+
+  &[disabled] {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
+  &.wpcf7-not-valid,
+  &.not-valid {
+    outline: solid 1px $color-error;
+    color: $color-error;
+
+    &::placeholder {
+      color: $color-error;
+      opacity: 1;
+    }
+  }
 }
 
 .wpcf7-not-valid-tip,
 .not-valid-tip {
-    font-size: rem(12px);
-    line-height: 1.4em;
-    color: $color-error;
-    display: block;
-    margin-top: rem(2px);
+  font-size: rem(12px);
+  line-height: 1.4em;
+  color: #fff;
+  display: block;
+  margin-top: 4px;
 
-    &~.wpcf7-not-valid-tip {
-        display: none;
-    }
-}
-
-.form-fields {
-    & .input {
-        margin-top: 4px;
-    }
+  & ~ .wpcf7-not-valid-tip {
+    display: none;
+  }
 }
 
 .wpcf7 {
-    position: relative;
+  position: relative;
 
-    & .screen-reader-response, & .wpcf7-response-output {
-        display: none;
-    }
+  & .screen-reader-response,
+  & .wpcf7-response-output {
+    display: none;
+  }
 
-    & .loader {
-        background-color: rgba(#fff, 0.5);
-        border-radius: 6px;
-        inset: -10px;
-    }
+  & .loader {
+    background-color: rgba(#fff, 0.5);
+    border-radius: 6px;
+    inset: -10px;
+  }
 }
