@@ -22,9 +22,6 @@
 @use "../modules/loader/loader.scss";
 @use "../modules/form-fields/form-fields.scss";
 @use "../modules/breadcrumbs/breadcrumbs.scss";
-
-@use "../../modules/header/header.scss";
-@use "../../modules/footer/footer.scss";
 // /= modulse
 
 
@@ -36,6 +33,8 @@
 // /= sections
 
 // templates
+@use "../../templates/header/header.scss";
+@use "../../templates/footer/footer.scss";
 @use "../../templates/parts/button/button.scss";
 @use "../../templates/parts/social/social.scss";
 @use "../../templates/parts/grey-card-with-number/grey-card-with-number.scss";

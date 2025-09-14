@@ -24,7 +24,7 @@ $button_data = wp_parse_args($button_data, [
 <?php elseif ($button_data['button_type'] === 'form' && check($button_data['button_text']) && $button_data['form'] instanceof WP_Post && $button_data['form']->post_type === 'wpcf7_contact_form'):
     $schortcode = '[contact-form-7 id="' . $button_data['form']->ID . '"]';
 ?>
-    <button data-action="open-popup-form" class="btn btn--<?= $button_data['button_style'] ?> <?= $classes ?>" data-action="open-popup-form" data-form='<?= $schortcode ?>' <?= $attributes ?>>
+    <button data-action="open-popup-form" class="btn btn--<?= $button_data['button_style'] ?> <?= $classes ?>" data-form='<?= $schortcode ?>' <?= $attributes ?>>
         <?= $button_data['button_text'] ?>
     </button>
 <?php endif; ?>

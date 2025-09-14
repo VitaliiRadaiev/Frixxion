@@ -27,4 +27,4 @@
 <body <?php body_class('menu-closed'); ?>>
   <pageid><?= get_the_ID() ?></pageid>
 
-  <?php include_once get_template_directory() . '/modules/header/header.php'; ?>
+  <?php include_once get_template_directory() . '/templates/header/header.php'; ?>

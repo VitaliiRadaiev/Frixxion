@@ -19,7 +19,7 @@ if (!$data['section_utils']['section_hide']):
     <section <?= get_section_id($data) ?> class="testimonials section-space-top relative rounded-[20px] py-[60px] lg:py-[100px] overflow-hidden">
         <?php get_template_part(get_part_path('dark-bg')) ?>
 
-        <div data-slider="testimonials-slider" class="container relative z-2">
+        <div data-slider="testimonials-slider" class="container relative z-2 first-child-no-margin">
             <div class="flex items-end justify-between gap-[40px]">
                 <?php if (check($data['section_head']['text'])): ?>
                     <div class="text-content text-content-white text-white/80 lg:max-w-[700px]">

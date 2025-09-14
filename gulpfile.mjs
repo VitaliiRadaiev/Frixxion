@@ -33,9 +33,9 @@ const path = {
         css: src_folder + "/styles/main.scss"
     },
     watch: {
-        html: ["./*.php", "./sections/**/*.php", "./modules/**/*.php", "./templates/**/*.php"],
-        js: [src_folder + "/js/**/*.js", "./sections/**/*.js", "./modules/**/*.js", "./templates/**/*.js", "./src/modules/**/*.js"],
-        css: [src_folder + "/styles/**/*.scss", "./sections/**/*.scss", "./modules/**/*.scss", "./templates/**/*.scss", "./src/modules/**/*.scss"]
+        html: ["./*.php", "./sections/**/*.php", "./templates/**/*.php"],
+        js: [src_folder + "/js/**/*.js", "./sections/**/*.js", "./templates/**/*.js", "./src/modules/**/*.js"],
+        css: [src_folder + "/styles/**/*.scss", "./sections/**/*.scss", "./templates/**/*.scss", "./src/modules/**/*.scss"]
     },
     clean: [project_name + "/js/", project_name + "/css/"]
 };

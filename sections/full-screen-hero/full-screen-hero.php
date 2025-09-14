@@ -45,7 +45,7 @@ if (!$data['section_utils']['section_hide']):
                 </div>
             </div>
 
-            <div style="background: linear-gradient(180deg, rgba(81, 18, 18, 0) 0%, #511212 100%);" class=" sm-max:hidden absolute z-3 left-0 right-0 bottom-[-1px] h-[130px] opacity-30"></div>
+            <div style="background: linear-gradient(180deg, rgba(81, 18, 18, 0) 0%, #511212 100%);" class=" pointer-events-none sm-max:hidden absolute z-3 left-0 right-0 bottom-[-1px] h-[130px] opacity-30"></div>
         <?php endif; ?>
     </section>
 

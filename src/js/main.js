@@ -36,13 +36,13 @@ window.addEventListener("DOMContentLoaded", () => {
     initDetectIsDoucementScrolling();
 
     @@include('../plugins/popup/popup.js')
+    @@include('../../templates/header/header.js')
 
     // sections
     @@include('../../sections/full-screen-hero/full-screen-hero.js')
     // /= sections
 
     // modules
-    @@include('../../modules/header/header.js')
     @@include('../modules/form-fields/form-fields.js')
     // /= modules
 }); 

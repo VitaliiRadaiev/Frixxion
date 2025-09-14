@@ -177,6 +177,38 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_68c671b524ced": {
+                    "key": "layout_68c671b524ced",
+                    "name": "color-cards-three-columns",
+                    "label": "[section] color-cards-three-columns",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_68c671b524cef",
+                            "label": "[section] color-cards-three-columns",
+                            "name": "color-cards-three-columns",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_68c670ef9ff9f"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_68bbf435db865": {
                     "key": "layout_68bbf435db865",
                     "name": "cta-two-columns-image-left",
@@ -560,5 +592,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1757653587
+    "modified": 1757835729
 }

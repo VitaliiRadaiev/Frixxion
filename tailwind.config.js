@@ -2,8 +2,7 @@
 module.exports = {
     content: [
         "./sections/**/*.php",
-        "./modules/**/*.php",
-        "./templates/**/*.php",
+        "./templates/**/**/*.php",
         "./gootenberg_custom_blocks_tailwind_compile_files/**/*.php",
         "./*.php",
     ],

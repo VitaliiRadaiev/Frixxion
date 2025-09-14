@@ -22,7 +22,7 @@ if (!$data['section_utils']['section_hide']):
     if ($query->have_posts()):
 ?>
         <section <?= get_section_id($data) ?> class="vacancies-slider section-space-top overflow-hidden">
-            <div data-slider="vacancies-slider" class="container">
+            <div data-slider="vacancies-slider" class="container first-child-no-margin">
                 <div class="flex items-end justify-between gap-[40px]">
                     <?php if (check($data['section_head']['text'])): ?>
                         <div class="text-content lg-max:text-center lg:max-w-[700px]">

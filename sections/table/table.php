@@ -17,7 +17,7 @@ if (!$data['section_utils']['section_hide']):
     <section <?= get_section_id($data) ?> class="table-section has-dark-bg section-space-top relative rounded-[20px] py-[60px] lg:py-[100px] overflow-hidden">
         <?php get_template_part(get_part_path('dark-bg')) ?>
 
-        <div class="container relative z-2">
+        <div class="container relative z-2 first-child-no-margin">
             <?php get_template_part(get_part_path('section-head'), null, [
                 'classes' => 'text-content-white',
                 'head_data' => $data['section_head']
