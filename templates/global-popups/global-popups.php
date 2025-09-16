@@ -8,7 +8,7 @@ $popup_unsuccsess = get_field('popup_unsuccsess', 'options');
             <button data-action="close-popup" class="absolute z-4 top-[20px] right-[20px] text-[24px] text-black cursor-pointer hover:text-black/70">
                 <span class="icon-x-mark"></span>
             </button>
-            <div data-popup-form-container class="rounded-[10px] bg-color-dark-20 pt-[40px] px-[16px] lg:p-[40px] first-child-no-margin [&_.form-title]:text-center [&_.wpcf7-not-valid-tip]:text-color-error">
+            <div data-popup-form-container class="rounded-[10px] bg-color-dark-20 py-[40px] px-[16px] lg:p-[40px] first-child-no-margin [&_.form-title]:text-center [&_.wpcf7-not-valid-tip]:text-color-error">
                  <?php echo do_shortcode('[contact-form-7 id="1622eb5" title="Leave a request"]'); ?> 
             </div>
         </div>

@@ -541,7 +541,7 @@ video {
     width: 100%;
     padding-left: 16px;
     padding-right: 16px;
-    max-width: 1920px !important;
+    max-width: 1600px !important;
   }
 .pointer-events-none {
   pointer-events: none;
@@ -612,6 +612,9 @@ video {
 .top-\[20px\] {
   top: 20px;
 }
+.-z-1 {
+  z-index: -1;
+}
 .z-1 {
   z-index: 1;
 }
@@ -645,11 +648,17 @@ video {
 .mb-\[10px\] {
   margin-bottom: 10px;
 }
+.mb-\[12px\] {
+  margin-bottom: 12px;
+}
 .mb-\[8px\] {
   margin-bottom: 8px;
 }
 .mb-auto {
   margin-bottom: auto;
+}
+.ml-auto {
+  margin-left: auto;
 }
 .mt-\[10px\] {
   margin-top: 10px;
@@ -732,6 +741,9 @@ video {
 .h-\[130px\] {
   height: 130px;
 }
+.h-\[24px\] {
+  height: 24px;
+}
 .h-\[28px\] {
   height: 28px;
 }
@@ -786,6 +798,9 @@ video {
 .max-h-full {
   max-height: 100%;
 }
+.\!min-h-\[38px\] {
+  min-height: 38px !important;
+}
 .min-h-\[42px\] {
   min-height: 42px;
 }
@@ -797,6 +812,9 @@ video {
 }
 .w-\[21px\] {
   width: 21px;
+}
+.w-\[24px\] {
+  width: 24px;
 }
 .w-\[280px\] {
   width: 280px;
@@ -854,6 +872,9 @@ video {
 .max-w-\[365px\] {
   max-width: 365px;
 }
+.max-w-\[483px\] {
+  max-width: 483px;
+}
 .max-w-\[648px\] {
   max-width: 648px;
 }
@@ -865,9 +886,6 @@ video {
 }
 .max-w-none {
   max-width: none;
-}
-.max-w-\[483px\] {
-  max-width: 483px;
 }
 .flex-shrink {
   -ms-flex-negative: 1;
@@ -1079,6 +1097,9 @@ video {
 .\!overflow-visible {
   overflow: visible !important;
 }
+.whitespace-nowrap {
+  white-space: nowrap;
+}
 .whitespace-pre-line {
   white-space: pre-line;
 }
@@ -1213,6 +1234,10 @@ video {
   padding-top: 6px;
   padding-bottom: 6px;
 }
+.py-\[40px\] {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
 .pb-\[16px\] {
   padding-bottom: 16px;
 }
@@ -1289,6 +1314,9 @@ video {
 .font-bold {
   font-weight: 700;
 }
+.font-light {
+  font-weight: 300;
+}
 .font-medium {
   font-weight: 500;
 }
@@ -1320,6 +1348,9 @@ video {
 }
 .text-white\/50 {
   color: rgb(255 255 255 / 0.5);
+}
+.text-white\/60 {
+  color: rgb(255 255 255 / 0.6);
 }
 .text-white\/70 {
   color: rgb(255 255 255 / 0.7);
@@ -5079,11 +5110,41 @@ pageid {
   position: relative;
 }
 
+.files-picker__main-btn {
+  min-height: 38px;
+  padding: 6px 20px;
+}
+.files-picker.error .files-picker__size-info span {
+  color: red;
+  font-size: 16px;
+}
+.files-picker.error .files-picker__add-more-btn {
+  pointer-events: none;
+  opacity: 0.6;
+}
+.files-picker.error .files-picker__size-value {
+  color: #F35C5C;
+}
+
+.input-hide {
+  position: absolute;
+  z-index: -1;
+  visibility: hidden;
+}
+
 .\!hidden {
   display: none !important;
 }
 
 .hidden {
+  display: none;
+}
+
+.first\:mt-0:first-child {
+  margin-top: 0px;
+}
+
+.empty\:hidden:empty {
   display: none;
 }
 
@@ -5139,10 +5200,6 @@ pageid {
 
 .\[\&_\.form-title\]\:text-center .form-title {
   text-align: center;
-}
-
-.\[\&_\.loader\]\:inset-0 .loader {
-  inset: 0px;
 }
 
 .\[\&_\.vacancy-card\]\:h-full .vacancy-card {
@@ -5590,6 +5647,9 @@ pageid {
   .lg\:mt-\[16px\] {
     margin-top: 16px;
   }
+  .lg\:mt-\[20px\] {
+    margin-top: 20px;
+  }
   .lg\:mt-\[30px\] {
     margin-top: 30px;
   }
@@ -5654,6 +5714,9 @@ pageid {
   .lg\:max-w-\[590px\] {
     max-width: 590px;
   }
+  .lg\:max-w-\[600px\] {
+    max-width: 600px;
+  }
   .lg\:max-w-\[700px\] {
     max-width: 700px;
   }
@@ -5708,6 +5771,9 @@ pageid {
   .lg\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
+  .lg\:grid-cols-\[166px_1fr\] {
+    grid-template-columns: 166px 1fr;
+  }
   .lg\:grid-cols-\[1fr_67\.5\%\] {
     grid-template-columns: 1fr 67.5%;
   }
@@ -5742,6 +5808,9 @@ pageid {
   }
   .lg\:gap-\[10px\] {
     gap: 10px;
+  }
+  .lg\:gap-\[20px\] {
+    gap: 20px;
   }
   .lg\:gap-\[40px\] {
     gap: 40px;
@@ -5980,10 +6049,6 @@ pageid {
   .container {
     max-width: 1920px;
   }
-    .container {
-      padding-left: 60px;
-      padding-right: 60px;
-    }
   .popup__body {
     padding: 60px;
   }
@@ -6090,6 +6155,15 @@ pageid {
   }
   .\34xl\:max-w-\[788px\] {
     max-width: 788px;
+  }
+  .\34xl\:grid-cols-\[180px_1fr\] {
+    grid-template-columns: 180px 1fr;
+  }
+}
+
+@media (max-width: 1919.98px) {
+  .\34xl-max\:max-w-\[800px\] {
+    max-width: 800px;
   }
 }
 
@@ -6267,6 +6341,9 @@ pageid {
   .hover\:text-white:hover {
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+  }
+  .hover\:text-white\/80:hover {
+    color: rgb(255 255 255 / 0.8);
   }
   .\[\&_\.h4\]\:hover\:text-color-accent-second:hover .h4 {
     color: var(--color-accent-second);

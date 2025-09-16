@@ -22,6 +22,7 @@
 
   document.addEventListener("wpcf7invalid", function (e) {
     loader.remove();
+    scrollToEl(e.target);
   });
 
   const openPopupFormButtons = document.querySelectorAll(

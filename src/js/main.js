@@ -1,7 +1,6 @@
 @@include('../plugins/swiper/swiper-bundle.js')
 @@include('../plugins/aos/aos.js')
 @@include('../plugins/inputmask/inputmask.min.js')
-
 @@include('./utils.js')
 @@include('./scripts.js')
 @@include('../modules/loader/loader.js')

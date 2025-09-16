@@ -1,0 +1,32 @@
+@use "./utils/abstracts" as *;
+
+.files-picker {
+    &__main-btn {
+        min-height: 38px;
+        padding: 6px 20px;
+    }
+
+    &.error {
+        & .files-picker__size-info {
+            & span {
+                color: red;
+                font-size: 16px;
+            }
+        }
+
+        & .files-picker__add-more-btn {
+            pointer-events: none;
+            opacity: 0.6;
+        }
+
+        & .files-picker__size-value {
+            color: $color-error;
+        }
+    }
+}
+
+.input-hide {
+    position: absolute;
+    z-index: -1;
+    visibility: hidden;
+}

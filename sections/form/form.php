@@ -29,7 +29,7 @@ if (!$data['section_utils']['section_hide']):
                         echo do_shortcode('[contact-form-7 id="' . $data['form'] . '"]');
                     }?>
                 </div>
-                <div class="mt-[40px] 2xl:mt-0 relative aspect-[1/0.78] md:aspect-auto md:h-[410px] lg:col-span-2 2xl:w-[410px] 2xl:absolute 2xl:top-[115px] 2xl:right-[600px] 4xl:right-[800px]">
+                <div class="mt-[40px] 2xl:mt-0 relative aspect-[1/0.78] md:aspect-auto md:h-[410px] lg:col-span-2 2xl:w-[410px] 2xl:absolute 2xl:top-[115px] 2xl:right-[600px]">
                     <?php get_template_part(get_part_path('image'), null, [
                         'classes' => 'ibg [&.ibg]:object-contain',
                         'image_data' => $data['image']
