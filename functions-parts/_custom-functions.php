@@ -131,3 +131,17 @@ function get_section_id($data)
 {
   return check($data['section_utils']['section_id']) ? 'id="' . $data['section_utils']['section_id'] . '"' : '';
 }
+
+
+function get_tpl_page($template_name)
+{
+  $url = null;
+  $pages = get_pages(array(
+    'meta_key' => '_wp_page_template',
+    'meta_value' => $template_name
+  ));
+  if (isset($pages[0])) {
+    return $pages[0];
+  }
+  return false;
+}

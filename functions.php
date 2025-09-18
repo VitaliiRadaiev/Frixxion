@@ -9,6 +9,7 @@ include_once 'functions-parts/_ajax.php';
 include_once 'functions-parts/_hooks.php';
 include_once 'functions-parts/_custom-functions.php';
 include_once 'functions-parts/custom-buttons-tinymce.php';
+include_once 'functions-parts/_gutenberg_custom_blocks_utils.php';
 
 /*
  * REMOVE EMOJI ICONS

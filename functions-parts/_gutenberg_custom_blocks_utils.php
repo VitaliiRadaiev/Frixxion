@@ -40,11 +40,11 @@ function get_sections_padding_classes($padding)
 function get_heading_size_class($size)
 {
     $sizesMap = [
-        'sm' => 'h5',
-        'md' => 'h4',
-        'lg' => 'h3',
-        'xl' => 'h2',
-        '2xl' => 'h1'
+        'sm' => 'text-h5',
+        'md' => 'text-h4',
+        'lg' => 'text-h3',
+        'xl' => 'text-h2',
+        '2xl' => 'text-h1'
     ];
 
     return isset($sizesMap[$size]) ? $sizesMap[$size] : '';

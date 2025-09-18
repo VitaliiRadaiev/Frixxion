@@ -33,7 +33,7 @@ const path = {
         css: src_folder + "/styles/main.scss"
     },
     watch: {
-        html: ["./*.php", "./sections/**/*.php", "./templates/**/*.php"],
+        html: ["./*.php", "./sections/**/*.php", "./templates/**/*.php", "./gootenberg_custom_blocks_tailwind_compile_files/*.php"],
         js: [src_folder + "/js/**/*.js", "./sections/**/*.js", "./templates/**/*.js", "./src/modules/**/*.js"],
         css: [src_folder + "/styles/**/*.scss", "./sections/**/*.scss", "./templates/**/*.scss", "./src/modules/**/*.scss"]
     },

@@ -11,6 +11,14 @@
     & a {
         background-color: $color-dark;
         color: #fff;
+        transition: background-color $tran, color $tran;
+
+        @media #{$mouse-device} {
+            &:hover {
+                background-color: rgba(#000, 0.2);
+                color: $color-dark !important;
+            }
+        }
     }
 }
 

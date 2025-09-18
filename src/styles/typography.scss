@@ -1,7 +1,6 @@
 @use "./utils/abstracts" as *;
+@use "sass:map";
 
-@mixin noMargin() {
-}
 
 .h1,
 .h2,
@@ -9,7 +8,7 @@
 .h4,
 .h5,
 .h6 {
-  & > *:last-child {
+  &>*:last-child {
     margin-bottom: 0;
   }
 
@@ -87,6 +86,7 @@
 }
 
 span {
+
   &.h1,
   &.h2,
   &.h3,
@@ -98,12 +98,22 @@ span {
 }
 
 .text-lg {
+  --font-size: #{rem(18px)};
+  --line-height: 1.4em;
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+
+  @media (min-width: $mq-lg) {
+    --font-size: #{rem(20px)};
+  }
 }
 
 .text-md {
   // body 15 / 16
   --font-size: #{rem(15px)};
   --line-height: 1.4em;
+  font-size: var(--font-size);
+  line-height: var(--line-height);
 
   @media (min-width: $mq-lg) {
     --font-size: #{rem(16px)};
@@ -114,26 +124,47 @@ span {
   // text 14
   --font-size: #{rem(14px)};
   --line-height: 1.4em;
+  font-size: var(--font-size);
+  line-height: var(--line-height);
 }
 
 .text-xs {
   // text 13
   --font-size: #{rem(13px)};
   --line-height: 1.4em;
+  font-size: var(--font-size);
+  line-height: var(--line-height);
 }
 
-.text-content {
+.text-xs-lg-sm {
+  --font-size: #{rem(13px)};
+  --line-height: 1.4em;
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+
+  @media (min-width: $mq-lg) {
+    --font-size: #{rem(14px)};
+  }
+}
+
+.wp-block-post-content {
+  --ul-dots: #{$gradient-first} !important;
+  color: $color-dark-80;
+}
+
+.text-content,
+.wp-block-post-content {
   --h-weight: 500;
   --h-color: #{$color-dark};
   --strong-color: #{$color-dark};
-  --link-color: var(--color-accent-first);
+  --link-color: #{$color-dark};
   --ul-dots: currentColor;
 
-  & > *:last-child {
+  &>*:last-child {
     margin-bottom: 0 !important;
   }
 
-  & > *:first-child {
+  &>*:first-child {
     margin-top: 0 !important;
   }
 
@@ -221,7 +252,7 @@ span {
   }
 
   & ul:not(.no-style) {
-    & > li {
+    &>li {
       position: relative;
       padding-left: 18px;
 
@@ -229,7 +260,7 @@ span {
         margin-bottom: 10px;
       }
 
-      & > *:last-child {
+      &>*:last-child {
         margin-bottom: 0;
       }
 
@@ -246,6 +277,24 @@ span {
         background: var(--ul-dots);
       }
     }
+
+    &.ul-ml {
+      &-no {
+        padding-left: 0;
+      }
+      &-sm {
+        padding-left:  1em;
+      }
+      &-md {
+        padding-left: 1.5em;
+      }
+      &-lg {
+        padding-left: 2.5em;
+      }
+      &-xl {
+        padding-left: 4em;
+      }
+    }
   }
 
   & ol:not(.no-style) {
@@ -253,12 +302,12 @@ span {
     list-style: number;
     list-style-position: inside;
 
-    & > li {
+    &>li {
       &:not(:last-child) {
         margin-bottom: 0.1em;
       }
 
-      & > *:last-child {
+      &>*:last-child {
         margin-bottom: 0;
       }
     }
@@ -294,13 +343,79 @@ span {
     color: var(--link-color);
   }
 
-  & figure:not(.no-style) {
-  }
+  & figure:not(.no-style) {}
 
   & strong {
     font-weight: 700;
     color: var(--strong-color);
   }
+
+  @each $size, $mq in $margin {
+    & .mt-#{$size} {
+      margin-top: #{map.get($mq, sm)} !important;
+
+      @media (min-width: $mq-md) {
+        margin-top: #{map.get($mq, md)} !important;
+      }
+
+      @media (min-width: $mq-xl) {
+        margin-top: #{map.get($mq, xl)} !important;
+      }
+
+      @media (min-width: $mq-4xl) {
+        margin-top: #{map.get($mq, 4xl)} !important;
+      }
+    }
+
+    & .mr-#{$size} {
+      margin-right: #{map.get($mq, sm)} !important;
+
+      @media (min-width: $mq-md) {
+        margin-right: #{map.get($mq, md)} !important;
+      }
+
+      @media (min-width: $mq-xl) {
+        margin-right: #{map.get($mq, xl)} !important;
+      }
+
+      @media (min-width: $mq-4xl) {
+        margin-right: #{map.get($mq, 4xl)} !important;
+      }
+    }
+
+    & .mb-#{$size} {
+      margin-bottom: #{map.get($mq, sm)} !important;
+
+      @media (min-width: $mq-md) {
+        margin-bottom: #{map.get($mq, md)} !important;
+      }
+
+      @media (min-width: $mq-xl) {
+        margin-bottom: #{map.get($mq, xl)} !important;
+      }
+
+      @media (min-width: $mq-4xl) {
+        margin-bottom: #{map.get($mq, 4xl)} !important;
+      }
+    }
+
+    & .ml-#{$size} {
+      margin-left: #{map.get($mq, sm)} !important;
+
+      @media (min-width: $mq-md) {
+        margin-left: #{map.get($mq, md)} !important;
+      }
+
+      @media (min-width: $mq-xl) {
+        margin-left: #{map.get($mq, xl)} !important;
+      }
+
+      @media (min-width: $mq-4xl) {
+        margin-left: #{map.get($mq, 4xl)} !important;
+      }
+    }
+  }
+
 }
 
 .truncate-text {
@@ -316,6 +431,7 @@ span {
 
 .article-content,
 .wp-block-post-content {
+
   & p a,
   li a {
     text-decoration-line: underline;
@@ -329,63 +445,6 @@ span {
   }
 }
 
-.ul-list-square {
-  padding-left: 1em;
-
-  & > li {
-    position: relative;
-    padding-left: 1.06em;
-
-    &:not(:last-child) {
-      margin-bottom: 0.53em;
-    }
-
-    & > *:last-child {
-      margin-bottom: 0;
-    }
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: calc(var(--line-height) / 2);
-      left: 0;
-      transform: translateY(-50%);
-      height: 6px;
-      width: 6px;
-      border-radius: 1px;
-      display: block;
-    }
-  }
-}
-
-.ol-list-number {
-  display: flex;
-  flex-direction: column;
-  gap: 0.625em;
-
-  & > li {
-    counter-increment: li;
-    position: relative;
-    min-height: var(--line-height);
-    padding-left: 2.125em;
-
-    &::before {
-      content: counter(li);
-      position: absolute;
-      top: calc(var(--line-height) / 2);
-      left: 0;
-      transform: translateY(-50%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 2px;
-      height: 1.5em;
-      min-width: 1.5em;
-      padding: 2px;
-      font-size: 1em;
-    }
-  }
-}
 
 .hover-link {
   @media #{$mouse-device} {
@@ -400,6 +459,7 @@ span {
     }
   }
 }
+
 .link {
   padding-right: 1.3em;
   position: relative;

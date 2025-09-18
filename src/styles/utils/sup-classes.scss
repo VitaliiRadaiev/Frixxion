@@ -1,5 +1,4 @@
 @use "./utils/abstracts" as *;
-@use "sass:map";
 
 .last-no-margin {
     &:last-child {
@@ -68,20 +67,20 @@
     overflow: hidden;
 }
 
-.mt-0.mt-0 {
-    margin-top: 0;
+.mt-0 {
+    margin-top: 0 !important;
 }
 
-.mr-0.mr-0 {
-    margin-right: 0;
+.mr-0 {
+    margin-right: 0 !important;
 }
 
-.mb-0.mb-0 {
-    margin-bottom: 0;
+.mb-0 {
+    margin-bottom: 0 !important;
 }
 
-.ml-0.ml-0 {
-    margin-left: 0;
+.ml-0 {
+    margin-left: 0 !important;
 }
 
 
@@ -106,107 +105,6 @@
     padding-top: var(--pt-header-height);
 }
 
-@each $size, $mq in $margin {
-    .mt-#{$size} {
-        margin-top: #{map.get($mq, sm)};
-
-        @media (min-width: $mq-md) {
-            margin-top: #{map.get($mq, md)};
-        }
-
-        @media (min-width: $mq-xl) {
-            margin-top: #{map.get($mq, xl)};
-        }
-
-        @media (min-width: $mq-4xl) {
-            margin-top: #{map.get($mq, 4xl)};
-        }
-    }
-
-    .mr-#{$size} {
-        margin-right: #{map.get($mq, sm)};
-
-        @media (min-width: $mq-md) {
-            margin-right: #{map.get($mq, md)};
-        }
-
-        @media (min-width: $mq-xl) {
-            margin-right: #{map.get($mq, xl)};
-        }
-
-        @media (min-width: $mq-4xl) {
-            margin-right: #{map.get($mq, 4xl)};
-        }
-    }
-
-    .mb-#{$size} {
-        margin-bottom: #{map.get($mq, sm)};
-
-        @media (min-width: $mq-md) {
-            margin-bottom: #{map.get($mq, md)};
-        }
-
-        @media (min-width: $mq-xl) {
-            margin-bottom: #{map.get($mq, xl)};
-        }
-
-        @media (min-width: $mq-4xl) {
-            margin-bottom: #{map.get($mq, 4xl)};
-        }
-    }
-
-    .ml-#{$size} {
-        margin-left: #{map.get($mq, sm)};
-
-        @media (min-width: $mq-md) {
-            margin-left: #{map.get($mq, md)};
-        }
-
-        @media (min-width: $mq-xl) {
-            margin-left: #{map.get($mq, xl)};
-        }
-
-        @media (min-width: $mq-4xl) {
-            margin-left: #{map.get($mq, 4xl)};
-        }
-    }
-}
-
-@each $size, $mq in $gap {
-    .gap-x-#{$size} {
-        column-gap: #{map.get($mq, sm)};
-
-        @media (min-width: $mq-md) {
-            column-gap: #{map.get($mq, md)};
-        }
-
-        @media (min-width: $mq-xl) {
-            column-gap: #{map.get($mq, xl)};
-        }
-
-        @media (min-width: $mq-4xl) {
-            column-gap: #{map.get($mq, 4xl)};
-        }
-    }
-
-    .gap-y-#{$size} {
-        row-gap: #{map.get($mq, sm)};
-
-        @media (min-width: $mq-md) {
-            row-gap: #{map.get($mq, md)};
-        }
-
-        @media (min-width: $mq-xl) {
-            row-gap: #{map.get($mq, xl)};
-        }
-
-        @media (min-width: $mq-4xl) {
-            row-gap: #{map.get($mq, 4xl)};
-        }
-    }
-}
-
-
 // Colors
 .bg-gradient-first {
     background-image: $gradient-first;
@@ -216,20 +114,41 @@
     background-image: $gradient-second;
 }
 
-.text-accent-first {
-    color: $color-accent-first;
+
+.text-color-accent-first {
+    color: var(--color-accent-first);
 }
-.text-accent-second {
-    color: $color-accent-second;
+
+.text-color-accent-second {
+    color: var(--color-accent-second);
 }
-.text-accent-third {
-    color: $color-accent-third;
+
+.text-color-accent-third {
+    color: var(--color-accent-third);
 }
-.text-dark {
-    color: $color-dark;
+
+.text-color-dark {
+    color: var(--color-dark);
 }
-.text-light {
-    color: $color-light;
+
+.text-color-dark-80 {
+    color: var(--color-dark-80);
+}
+
+.text-color-dark-40 {
+    color: var(--color-dark-40);
+}
+
+.text-color-dark-20 {
+    color: var(--color-dark-20);
+}
+
+.text-color-light {
+    color: var(--color-light);
+}
+
+.text-color-error {
+    color: var(--color-error);
 }
 
 .text-gradient-first {
@@ -253,8 +172,8 @@
 }
 
 .text-content-white {
-    --h-color: var(--color-light); 
-    --strong-color: var(--color-light); 
+    --h-color: var(--color-light);
+    --strong-color: var(--color-light);
     --link-color: var(--color-accent-first);
 }
 
@@ -268,4 +187,24 @@
         flex-wrap: wrap;
         gap: 20px;
     }
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.lowercase {
+    text-transform: lowercase;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
 }
