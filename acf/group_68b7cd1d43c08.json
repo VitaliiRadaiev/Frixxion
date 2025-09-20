@@ -45,11 +45,11 @@
                     "preview_size": "thumbnail"
                 },
                 {
-                    "key": "field_68b7cd8da84b5",
-                    "label": "Button",
-                    "name": "link",
+                    "key": "field_68ce8e28a1ee1",
+                    "label": "Buttons",
+                    "name": "buttons",
                     "aria-label": "",
-                    "type": "link",
+                    "type": "repeater",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -58,8 +58,41 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "array",
-                    "allow_in_bindings": 0
+                    "layout": "block",
+                    "pagination": 0,
+                    "min": 0,
+                    "max": 0,
+                    "collapsed": "",
+                    "button_label": "Add Row",
+                    "rows_per_page": 20,
+                    "sub_fields": [
+                        {
+                            "key": "field_68ce8e63a1ee2",
+                            "label": "",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_68b92bebff47c",
+                                "field_68b92cd6ff47d",
+                                "field_68b92d00ff47e",
+                                "field_68b92d20ff47f"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0,
+                            "parent_repeater": "field_68ce8e28a1ee1"
+                        }
+                    ]
                 }
             ]
         }
@@ -82,5 +115,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1757143743
+    "modified": 1758368044
 }

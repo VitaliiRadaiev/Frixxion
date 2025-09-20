@@ -1037,6 +1037,7 @@ window.addEventListener("DOMContentLoaded", () => {
             mobileMenu.classList.toggle('mobile-menu--open', isMenuOpen);
             btnBurger.classList.toggle('active', isMenuOpen);
             header.classList.toggle('header--no-gradient', isMenuOpen);
+            document.body.classList.toggle('menu-is-open', isMenuOpen);
             toggleDisablePageScroll(isMenuOpen);
         });
     }

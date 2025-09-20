@@ -27,7 +27,7 @@
                                         </div>
                                     <?php endif; ?>
                                     <?php if (check($card['text'])): ?>
-                                        <div class="mt-[10px] text-md text-content text-content-white text-white">
+                                        <div class="mt-[10px] text-md text-content text-content-white !text-white">
                                             <?= $card['text'] ?>
                                         </div>
                                     <?php endif; ?>

@@ -26,6 +26,26 @@
     }
 }
 
+.error404 {
+    &.document-is-scrolling, &.menu-is-open {
+        & .logo-white .change-color {
+            fill: $color-dark;
+        }
+
+        & [data-action="open-mobile-menu"]>span {
+            background-color: #000;
+        }
+    }
+
+    & .logo-white .change-color {
+        transition: fill $tran;
+    }
+
+    & [data-action="open-mobile-menu"]>span {
+        background-color: #fff;
+    }
+}
+
 .mobile-menu {
     transition: opacity $tran, transform $tran, visibility $tran;
 

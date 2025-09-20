@@ -82,7 +82,7 @@ $list = get_field('list');
                             echo do_shortcode('[contact-form-7 id="5794ef5" title="Vacancy form"]');
                         } ?>
                     </div>
-                    <div class="mt-[40px] 2xl:mt-0 relative aspect-[1/0.78] md:aspect-auto md:h-[410px] lg:col-span-2 2xl:w-[410px] 2xl:absolute 2xl:top-[115px] 2xl:right-[600px]">
+                    <div class="mt-[40px] 2xl:mt-0 relative aspect-[1/0.78] md:aspect-auto md:h-[410px] lg:col-span-2 2xl:w-[410px] 2xl:absolute 2xl:bottom-[45px] 2xl:right-[600px]">
                         <?php get_template_part(get_part_path('image'), null, [
                             'classes' => 'ibg [&.ibg]:object-contain',
                             'image_data' => $data['image']

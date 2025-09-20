@@ -407,6 +407,28 @@
             "selected": 0
         },
         {
+            "key": "field_68ce6efb71494",
+            "label": "",
+            "name": "",
+            "aria-label": "",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_68ce6e4a4567d"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
             "key": "field_68b7ccd835a47",
             "label": "Analytics scripts",
             "name": "",
@@ -485,5 +507,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1758351983
+    "modified": 1758359310
 }

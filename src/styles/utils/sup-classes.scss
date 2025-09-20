@@ -115,19 +115,19 @@
 }
 
 
-.text-color-accent-first {
+.text-color-accent-first, .text-accent-first {
     color: var(--color-accent-first);
 }
 
-.text-color-accent-second {
+.text-color-accent-second, .text-accent-second {
     color: var(--color-accent-second);
 }
 
-.text-color-accent-third {
+.text-color-accent-third, .text-accent-third {
     color: var(--color-accent-third);
 }
 
-.text-color-dark {
+.text-color-dark, .text-dark {
     color: var(--color-dark);
 }
 
@@ -143,7 +143,7 @@
     color: var(--color-dark-20);
 }
 
-.text-color-light {
+.text-color-light, .text-light  {
     color: var(--color-light);
 }
 
@@ -175,6 +175,7 @@
     --h-color: var(--color-light);
     --strong-color: var(--color-light);
     --link-color: var(--color-accent-first);
+    color: rgba(#fff, 0.8);
 }
 
 .buttons-group {

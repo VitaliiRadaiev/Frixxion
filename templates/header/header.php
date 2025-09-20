@@ -24,7 +24,6 @@ if (isset($locations['Header menu'])) {
 
 $header_data = get_field('header', 'options');
 ?>
-
 <header data-header class="header fixed top-0 left-0 w-full z-49" data-popup="add-right-padding">
     <div class="container relative z-2 flex items-center justify-between py-[16px]">
         <?php if (is_front_page()): ?>
@@ -33,7 +32,11 @@ $header_data = get_field('header', 'options');
             </div>
         <?php else: ?>
             <a href="<?= get_home_url() ?>" class="shrink-0 grow-0" aria-label="Main logo, link to home">
-                <?php get_image($header_data['logo'], 'h-[51px] w-auto') ?>
+                <?php if (is_404()): ?>
+                    <img class="img-svg h-[51px] w-auto" src="<?= get_template_directory_uri() . '/assets/images/general/logo-text-light.svg' ?>" alt="">
+                <?php else: ?>
+                    <?php get_image($header_data['logo'], 'h-[51px] w-auto') ?>
+                <?php endif; ?>
             </a>
         <?php endif; ?>
 
@@ -46,10 +49,16 @@ $header_data = get_field('header', 'options');
         </nav>
 
         <div class="">
-            <?php if (check($header_data['link'])): ?>
-                <a href="<?= $header_data['link']['url'] ?>" target="<?= $header_data['link'] ? '_blank' : '_self' ?>" class="lg-max:hidden btn btn--light btn--sm">
-                    <?= $header_data['link']['title'] ?>
-                </a>
+            <?php if (check($header_data['buttons'])): ?>
+                <div class="flex flex-col gap-[10px] lg:flex-row">
+                    <?php foreach ($header_data['buttons'] as $button) {
+                        $button['button_style'] = 'light';
+                        get_template_part(get_part_path('button'), null, [
+                            'classes' => 'btn--sm lg-max:hidden',
+                            'button_data' => $button
+                        ]);
+                    } ?>
+                </div>
             <?php endif; ?>
             <button
                 aria-label="open-mobile-menu" data-action="open-mobile-menu" class="h-[44px] w-[44px] relative lg:hidden">
@@ -78,10 +87,16 @@ $header_data = get_field('header', 'options');
         <div class="flex flex-col items-center gap-[30px]">
             <?php get_template_part(get_part_path('social'), null, ['classes' => 'social--dark']) ?>
 
-            <?php if (check($header_data['link'])): ?>
-                <a href="<?= $header_data['link']['url'] ?>" target="<?= $header_data['link'] ? '_blank' : '_self' ?>" class="btn btn--light btn--sm sm-max:w-full">
-                    <?= $header_data['link']['title'] ?>
-                </a>
+            <?php if (check($header_data['buttons'])): ?>
+                <div class="flex flex-col gap-[10px] items-center w-full">
+                    <?php foreach ($header_data['buttons'] as $button) {
+                        $button['button_style'] = 'light';
+                        get_template_part(get_part_path('button'), null, [
+                            'classes' => 'btn--sm sm-max:w-full',
+                            'button_data' => $button
+                        ]);
+                    } ?>
+                </div>
             <?php endif; ?>
         </div>
     </div>
