@@ -22,9 +22,13 @@
     };
   </script>
    <!-- Скріпт для автоперезавантаження сторінки, видалить на релізі -->
+
+    <?= get_field('analytics_scripts_before_head', 'options'); ?>
 </head>
 
-<body <?php body_class('menu-closed'); ?>>
+<body <?php body_class(); ?>>
   <pageid><?= get_the_ID() ?></pageid>
+
+  <?= get_field('analytics_scripts_after_body', 'options'); ?>
 
   <?php include_once get_template_directory() . '/templates/header/header.php'; ?>

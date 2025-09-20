@@ -1,6 +1,7 @@
 @@include('../plugins/swiper/swiper-bundle.js')
 @@include('../plugins/aos/aos.js')
 @@include('../plugins/inputmask/inputmask.min.js')
+@@include('../plugins/fancybox/fancybox.min.js')
 @@include('./utils.js')
 @@include('./scripts.js')
 @@include('../modules/loader/loader.js')
@@ -33,6 +34,7 @@ window.addEventListener("DOMContentLoaded", () => {
     initScrollContainers();
     initSetElSizeVariables();
     initDetectIsDoucementScrolling();
+    initFancybox();
 
     @@include('../plugins/popup/popup.js')
     @@include('../../templates/header/header.js')

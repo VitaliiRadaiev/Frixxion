@@ -23,7 +23,7 @@ if (!$data['section_utils']['section_hide']):
 ?>
         <section <?= get_section_id($data) ?> class="vacancies-slider section-space-top overflow-hidden">
             <div data-slider="vacancies-slider" class="container first-child-no-margin">
-                <div class="flex items-end justify-between gap-[40px]">
+                <div class="lg:flex items-end justify-between gap-[40px]">
                     <?php if (check($data['section_head']['text'])): ?>
                         <div class="text-content lg-max:text-center lg:max-w-[700px]">
                             <?= $data['section_head']['text'] ?>

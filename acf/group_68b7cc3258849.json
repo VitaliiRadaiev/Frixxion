@@ -248,6 +248,27 @@
             "append": ""
         },
         {
+            "key": "field_68ce510246484",
+            "label": "Text  \"Other news\"",
+            "name": "text_other_news",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Other news",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_68b7d1033b1f9",
             "label": "Global social list",
             "name": "",
@@ -402,6 +423,48 @@
             "placement": "left",
             "endpoint": 0,
             "selected": 0
+        },
+        {
+            "key": "field_68ce51fe42c78",
+            "label": "Analytics scripts before \/head",
+            "name": "analytics_scripts_before_head",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_68ce524442c79",
+            "label": "Analytics scripts after body",
+            "name": "analytics_scripts_after_body",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
         }
     ],
     "location": [
@@ -422,5 +485,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1758089162
+    "modified": 1758351983
 }

@@ -147,8 +147,10 @@ span {
   }
 }
 
-.wp-block-post-content {
+.wp-block-post-content,
+.article-content {
   --ul-dots: #{$gradient-first} !important;
+  --ol-markers: #{$color-accent-first} !important;
   color: $color-dark-80;
 }
 
@@ -159,6 +161,7 @@ span {
   --strong-color: #{$color-dark};
   --link-color: #{$color-dark};
   --ul-dots: currentColor;
+  --ol-markers: currentColor;
 
   &>*:last-child {
     margin-bottom: 0 !important;
@@ -282,15 +285,19 @@ span {
       &-no {
         padding-left: 0;
       }
+
       &-sm {
-        padding-left:  1em;
+        padding-left: 1em;
       }
+
       &-md {
         padding-left: 1.5em;
       }
+
       &-lg {
         padding-left: 2.5em;
       }
+
       &-xl {
         padding-left: 4em;
       }
@@ -298,17 +305,58 @@ span {
   }
 
   & ol:not(.no-style) {
-    padding-left: 0em;
-    list-style: number;
-    list-style-position: inside;
+
 
     &>li {
+      padding-left: 2.0625em;
+      position: relative;
+      counter-increment: li;
+
+      &::before {
+        content: counter(li);
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 1.642em;
+        min-width: 1.642em;
+        padding: 2px 4px;
+        border: 1px solid var(--ol-markers);
+        color: var(--ol-markers);
+        font-size: 0.875em;
+        border-radius: 999px;
+      }
+
       &:not(:last-child) {
-        margin-bottom: 0.1em;
+        margin-bottom: 10px;
       }
 
       &>*:last-child {
         margin-bottom: 0;
+      }
+    }
+
+    &.ol-ml {
+      &-no {
+        padding-left: 0;
+      }
+
+      &-sm {
+        padding-left: 1em;
+      }
+
+      &-md {
+        padding-left: 1.5em;
+      }
+
+      &-lg {
+        padding-left: 2.5em;
+      }
+
+      &-xl {
+        padding-left: 4em;
       }
     }
   }
@@ -343,7 +391,14 @@ span {
     color: var(--link-color);
   }
 
-  & figure:not(.no-style) {}
+  & .article-image,
+  & .article-slider,
+  & .article-quote,
+  & .article-video,
+  & .article-box {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
 
   & strong {
     font-weight: 700;

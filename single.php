@@ -142,6 +142,21 @@ $sources = get_field('source');
             </div>
         </div>
     </section>
+
+    <?php 
+        $text_other_news = get_field('text_other_news', 'options');
+        $data = [
+            'section_head' => [
+                'text' => '<h2>'.$text_other_news.'</h2>',
+            ],
+            'section_utils' => [
+                'section_hide' => false,
+                'section_id' => 'related-news'
+            ],
+            'buttons' => [],
+        ];
+        include_once get_template_directory() . '/sections/news-slider/news-slider.php';
+    ?>
 </main>
 <?php
 
