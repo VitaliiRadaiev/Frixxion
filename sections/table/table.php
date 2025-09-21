@@ -24,7 +24,7 @@ if (!$data['section_utils']['section_hide']):
             ]) ?>
             <div data-slider="table" class="mt-[30px] lg:mt-[50px]">
                 <div class="swiper [&.swiper]:overflow-visible">
-                    <div class="swiper-wrapper lg:grid lg:grid-cols-[33.5%_minmax(290px,1fr)_minmax(290px,1fr)_minmax(290px,1fr)]">
+                    <div data-aos="cascade-fade-in" class="swiper-wrapper lg:grid lg:grid-cols-[33.5%_minmax(290px,1fr)_minmax(290px,1fr)_minmax(290px,1fr)]">
                         <?php
                         $columns = 4;
                         $color_map = ['#f0f0f0', '#fff8e6', '#fff2e9', '#ffeaea'];

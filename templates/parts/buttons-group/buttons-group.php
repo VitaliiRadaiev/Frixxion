@@ -5,7 +5,7 @@ $buttons = $args['buttons'] ?? [];
 
 if (check($buttons)):
 ?>
-    <div class="buttons-group <?= $classes ?>" <?= $attributes ?>>
+    <div data-aos="cascade-fade-in" class="buttons-group <?= $classes ?>" <?= $attributes ?>>
         <?php foreach($buttons as $button_data) {
             get_template_part(get_part_path('button'), null, ['button_data' => $button_data]);
         }?>

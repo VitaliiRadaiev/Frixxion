@@ -1,0 +1,38 @@
+@use "./utils/abstracts" as *;
+@use "./typography.scss";
+
+.pagination-links {
+    &>* {
+        height: 44px;
+        min-width: 44px;
+        border-radius: 100px;
+        background-color: $color-dark-20;
+        color: $color-dark;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        @extend .text-md;
+        transition: background-color $tran, color $tran;
+
+        @media #{$mouse-device} {
+            &:not(.current):not(.dots):hover {
+                background-color: $color-accent-first;
+            }
+        }
+
+        @media (min-width: $mq-md) {
+            height: 50px;
+            min-width: 50px;
+            gap: 10px;
+        }
+
+        &.current {
+            background-color: $color-accent-first;
+        }
+
+        &.dots {
+            padding-bottom: 0.45em;
+        }
+    }
+}

@@ -11,7 +11,7 @@ if (!$data['section_utils']['section_hide']):
             ]) ?>
 
             <div class="mt-[30px] lg:mt-[50px] grid gap-[30px] lg:gap-[52px] lg:grid-cols-2">
-                <div class="relative overflow-hidden rounded-[10px] aspect-[1/0.7] sm:aspect-[1/0.54] lg:aspect-auto lg:min-h-[320px] bg-gradient-second">
+                <div data-aos="fade-in" data-aos-delay="1000" class="relative overflow-hidden rounded-[10px] aspect-[1/0.7] sm:aspect-[1/0.54] lg:aspect-auto lg:min-h-[320px] bg-gradient-second">
                     <?php get_template_part(get_part_path('image'), null, [
                         'classes' => 'ibg',
                         'image_data' => $data['image']
@@ -19,7 +19,7 @@ if (!$data['section_utils']['section_hide']):
                 </div>
                 <div class="first-child-no-margin lg:py-[75px] self-center">
                     <?php if (check($data['text'])): ?>
-                        <div class="text-content text-content-white text-md text-white/80 lg:max-w-[590px] 4xl:max-w-[690px]">
+                        <div data-aos="cascade-fade-in" class="text-content text-content-white text-md text-white/80 lg:max-w-[590px] 4xl:max-w-[690px]">
                             <?= $data['text'] ?>
                         </div>
                     <?php endif; ?>

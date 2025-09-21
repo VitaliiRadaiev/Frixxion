@@ -25,7 +25,7 @@ if (!$data['section_utils']['section_hide']):
             <div data-slider="vacancies-slider" class="container first-child-no-margin">
                 <div class="lg:flex items-end justify-between gap-[40px]">
                     <?php if (check($data['section_head']['text'])): ?>
-                        <div class="text-content lg-max:text-center lg:max-w-[700px]">
+                        <div data-aos="cascade-fade-in" class="text-content lg-max:text-center lg:max-w-[700px]">
                             <?= $data['section_head']['text'] ?>
                         </div>
                     <?php endif; ?>
@@ -34,7 +34,7 @@ if (!$data['section_utils']['section_hide']):
                 </div>
 
                 <div class="mt-[30px] lg:mt-[50px] swiper lg-max:[&.swiper]:overflow-visible md-max:!px-[10px]">
-                    <div class="swiper-wrapper">
+                    <div data-aos="cascade-fade-in" class="swiper-wrapper">
                         <?php while ($query->have_posts()): $query->the_post(); ?>
                            <div class="swiper-slide lg-max:[&.swiper-slide]:w-[324px] !h-auto [&_.vacancy-card]:h-full">
                             <?php get_template_part(get_part_path('vacancy-card'), null, [

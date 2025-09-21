@@ -8,7 +8,6 @@ wp_enqueue_script(
     true
 );
 
-get_header();
 $options = get_fields('options');
 $list = get_field('list');
 ?>
@@ -93,6 +92,3 @@ $list = get_field('list');
         </section>
     <?php endif; ?>
 </main>
-<?php
-
-get_footer();

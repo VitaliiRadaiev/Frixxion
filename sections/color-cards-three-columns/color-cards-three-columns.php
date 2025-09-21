@@ -6,7 +6,7 @@
             ]) ?>
 
             <?php if (check($data['list'])): ?>
-                <div class="mt-[30px] lg:mt-[50px] grid gap-[10px] md:gap-[20px] md:grid-cols-2 lg:grid-cols-3 md-and-lg-max:[&>*:last-child:nth-child(odd)]:col-span-2">
+                <div data-aos="cascade-fade-in" class="mt-[30px] lg:mt-[50px] grid gap-[10px] md:gap-[20px] md:grid-cols-2 lg:grid-cols-3 md-and-lg-max:[&>*:last-child:nth-child(odd)]:col-span-2">
                     <?php foreach ($data['list'] as $card): ?>
                         <div class="rounded-[10px] p-[16px] md:p-[30px] bg-color-dark overflow-hidden relative">
                             <img class="absolute z-1 left-full bottom-full w-[520px] lg:w-[570px] h-auto max-w-none -translate-x-[140px] lg:-translate-x-[180px] translate-y-[260px]" src="<?= get_template_directory_uri() . '/assets/images/general/light-md.webp' ?>" alt="">

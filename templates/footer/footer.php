@@ -4,7 +4,7 @@ $footer_data = get_field('footer', 'options');
 <footer class="footer section-space-top bg-color-dark rounded-t-[20px] pt-[60px] pb-[30px] text-color-light">
     <div class="container [&_a]:transition-colors hover:[&_a]:text-color-accent-first">
         <div class="lg:grid lg:grid-cols-[1fr_67.5%] lg:gap-[100px]">
-            <div class="lg:flex lg:flex-col">
+            <div data-aos="cascade-fade-in" class="lg:flex lg:flex-col">
                 <?php if (is_front_page()): ?>
                     <div class="xl:mb-auto">
                         <?php get_image($footer_data['logo'], 'h-[51px] w-auto') ?>
@@ -22,7 +22,7 @@ $footer_data = get_field('footer', 'options');
                 <?php endif; ?>
             </div>
             <div class="mt-[40px] lg:mt-0 grid grid-cols-2 xl:grid-cols-4 gap-x-[20px] lg:gap-x-[50px] gap-y-[40px]">
-                <div class="first-child-nomargin">
+                <div data-aos="cascade-fade-in" class="first-child-nomargin">
                     <?php
                     $col_1 = $footer_data['col_nav_1'];
                     ?>
@@ -34,7 +34,7 @@ $footer_data = get_field('footer', 'options');
                     <?php endif; ?>
 
                     <?php if (check($col_1['list'])): ?>
-                        <ul class="mt-[20px] grid gap-[16px] lg:gap-[10px]">
+                        <ul data-aos="cascade-fade-in" class="mt-[20px] grid gap-[16px] lg:gap-[10px]">
                             <?php
                             foreach ($col_1['list'] as $item):
                                 if (check($item['link'])):
@@ -51,7 +51,7 @@ $footer_data = get_field('footer', 'options');
                         </ul>
                     <?php endif; ?>
                 </div>
-                <div class="first-child-nomargin">
+                <div data-aos="cascade-fade-in" class="first-child-nomargin">
                     <?php
                     $col_2 = $footer_data['col_nav_2'];
                     ?>
@@ -63,7 +63,7 @@ $footer_data = get_field('footer', 'options');
                     <?php endif; ?>
 
                     <?php if (check($col_2['list'])): ?>
-                        <ul class="mt-[20px] grid gap-[16px] lg:gap-[10px]">
+                        <ul data-aos="cascade-fade-in" class="mt-[20px] grid gap-[16px] lg:gap-[10px]">
                             <?php
                             foreach ($col_2['list'] as $item):
                                 if (check($item['link'])):
@@ -80,13 +80,13 @@ $footer_data = get_field('footer', 'options');
                         </ul>
                     <?php endif; ?>
                 </div>
-                <div class="first-child-nomargin">
+                <div data-aos="cascade-fade-in" class="first-child-nomargin">
                     <?php
                     $col_3 = $footer_data['col_nav_3'];
                     ?>
 
                     <?php if (check($col_3['title'])): ?>
-                        <div class="text-white/70 font-medium">
+                        <div  class="text-white/70 font-medium">
                             <?= $col_3['title'] ?>
                         </div>
                     <?php endif; ?>

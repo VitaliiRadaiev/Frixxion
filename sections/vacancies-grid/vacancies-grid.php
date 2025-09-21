@@ -30,7 +30,7 @@ if (!$data['section_utils']['section_hide']):
                     'head_data' => $data['section_head']
                 ]) ?>
 
-                <div data-list class="mt-[30px] lg:mt-[50px] grid gap-[10px] md:gap-[20px] md:grid-cols-2 lg:grid-cols-4 md-and-lg-max:[&>*:last-child:nth-child(odd)]:col-span-2 relative">
+                <div data-aos="cascade-fade-in" data-list class="mt-[30px] lg:mt-[50px] grid gap-[10px] md:gap-[20px] md:grid-cols-2 lg:grid-cols-4 md-and-lg-max:[&>*:last-child:nth-child(odd)]:col-span-2 relative">
                     <?php while ($query->have_posts()) {
                         $query->the_post();
                         get_template_part(get_part_path('vacancy-card'), null, [
@@ -42,7 +42,7 @@ if (!$data['section_utils']['section_hide']):
                         ]);
                     } ?>
                 </div>
-                <div class="<?= $query->have_posts() && ($query->max_num_pages > 1) ? '' : 'hidden' ?> mt-[30px] lg:mt-[50px] buttons-group sm:justify-center">
+                <div data-aos="fade-in" data-aos-delay="1000" class="<?= $query->have_posts() && ($query->max_num_pages > 1) ? '' : 'hidden' ?> mt-[30px] lg:mt-[50px] buttons-group sm:justify-center">
                     <button data-action="load-more" class="btn btn--light">
                         <?= $text_show_more ?>
                     </button>

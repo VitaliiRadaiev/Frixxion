@@ -7,7 +7,7 @@ if (!$data['section_utils']['section_hide']):
                 <div class="2xl:relative z-2 flex flex-col gap-[30px] justify-between flex-shrink flex-grow lg:max-w-[420px]">
                     <div class="first-child-no-margin">
                         <?php if (check($data['text'])): ?>
-                            <div class="text-content text-content-white text-white/80">
+                            <div data-aos="cascade-fade-in" class="text-content text-content-white text-white/80">
                                 <?= $data['text'] ?>
                             </div>
                         <?php endif; ?>
@@ -24,12 +24,12 @@ if (!$data['section_utils']['section_hide']):
                         'classes' => 'social--white'
                     ]) ?>
                 </div>
-                <div class="2xl:relative z-2 mt-[40px] lg:m-0 contacn-form-wrapper flex-shrink-0 flex-grow-0 lg:w-[500px] 2xl:w-[556px]">
+                <div data-aos="fade-in" data-aos-delay="1000" class="2xl:relative z-2 mt-[40px] lg:m-0 contacn-form-wrapper flex-shrink-0 flex-grow-0 lg:w-[500px] 2xl:w-[556px]">
                     <?php if(check($data['form'])){
                         echo do_shortcode('[contact-form-7 id="' . $data['form'] . '"]');
                     }?>
                 </div>
-                <div class="mt-[40px] 2xl:mt-0 relative aspect-[1/0.78] md:aspect-auto md:h-[410px] lg:col-span-2 2xl:w-[410px] 2xl:absolute 2xl:top-[115px] 2xl:right-[600px]">
+                <div data-aos="fade-in" data-aos-delay="1000" class="mt-[40px] 2xl:mt-0 relative aspect-[1/0.78] md:aspect-auto md:h-[410px] lg:col-span-2 2xl:w-[410px] 2xl:absolute 2xl:top-[115px] 2xl:right-[600px]">
                     <?php get_template_part(get_part_path('image'), null, [
                         'classes' => 'ibg [&.ibg]:object-contain',
                         'image_data' => $data['image']

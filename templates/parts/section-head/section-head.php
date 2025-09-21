@@ -9,7 +9,7 @@ $head_data = wp_parse_args($head_data, [
 
 if (check($head_data['text'])):
 ?>
-    <div <?= $attributes ?> class="<?= $classes ?> section-head text-center text-content text-md max-w-[762px] mx-auto w-full font-medium">
+    <div data-aos="cascade-fade-in" <?= $attributes ?> class="<?= $classes ?> section-head text-center text-content text-md max-w-[762px] mx-auto w-full font-medium">
         <?= $head_data['text'] ?>
     </div>
 <?php endif; ?>

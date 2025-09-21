@@ -390,7 +390,7 @@ function calcValueByProgressArr(values, progress) {
     return values[lowerIndex] + (values[upperIndex] - values[lowerIndex]) * intervalProgress;
 }
 
-function scrollToEl(target) {
+function scrollToEl(target, offset = 0) {
     let el = typeof target === 'string' ? document.querySelector(target) : target;
     if (!el) return;
 
@@ -402,7 +402,7 @@ function scrollToEl(target) {
 
     setTimeout(() => {
         window.scrollTo({
-            top: top,
+            top: top + offset,
             behavior: 'smooth',
         });
     }, 0);

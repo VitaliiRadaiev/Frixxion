@@ -4,7 +4,7 @@ if (!$data['section_utils']['section_hide']):
 ?>
     <section <?= get_section_id($data) ?> class="hero pt-header-height [&+.section-space-top]:mt-0">
         <div class="container pb-[30px] lg:pb-[50px]">
-            <div class="breadcrumbs lg:pt-[14px] [&:has(a)]:block hidden">
+            <div data-aos="fade-in" data-aos-delay="1000" class="breadcrumbs lg:pt-[14px] [&:has(a)]:block hidden">
                 <?php if (function_exists('rank_math_the_breadcrumbs')) rank_math_the_breadcrumbs(); ?>
             </div>
 

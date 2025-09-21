@@ -9,7 +9,7 @@ if (!$data['section_utils']['section_hide']):
             ]) ?>
 
             <?php if (check($data['list'])): ?>
-                <div class="mt-[30px] lg:mt-[50px] grid gap-[10px] md:gap-[20px] md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md-and-lg-max:[&>*:last-child:nth-child(odd)]:col-span-2">
+                <div data-aos="cascade-fade-in" class="mt-[30px] lg:mt-[50px] grid gap-[10px] md:gap-[20px] md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md-and-lg-max:[&>*:last-child:nth-child(odd)]:col-span-2">
                     <?php
                     foreach ($data['list'] as $item) {
                         get_template_part(get_part_path('grey-card-with-icon'), null, [

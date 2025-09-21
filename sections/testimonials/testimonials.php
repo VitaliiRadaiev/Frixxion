@@ -22,14 +22,14 @@ if (!$data['section_utils']['section_hide']):
         <div data-slider="testimonials-slider" class="container relative z-2 first-child-no-margin">
             <div class="flex items-end justify-between gap-[40px]">
                 <?php if (check($data['section_head']['text'])): ?>
-                    <div class="text-content text-content-white text-white/80 lg:max-w-[700px]">
+                    <div data-aos="cascade-fade-in" class="text-content text-content-white text-white/80 lg:max-w-[700px]">
                         <?= $data['section_head']['text'] ?>
                     </div>
                 <?php endif; ?>
 
                 <?php get_template_part(get_part_path('slider-nav-arrows'), null, ['classes' => 'text-color-light lg-max:hidden']) ?>
             </div>
-            <div class="mt-[30px] lg:mt-[50px] swiper !overflow-visible md-max:!px-[10px]">
+            <div data-aos="fade-in" data-aos-delay="1000" class="mt-[30px] lg:mt-[50px] swiper !overflow-visible md-max:!px-[10px]">
                 <div class="swiper-wrapper">
                     <?php foreach ($data['list'] as $item): ?>
                         <div class="swiper-slide !h-auto md:w-[670px] 4xl:w-[788px] [&:not(.swiper-slide-active)]:opacity-60 !transition-opacity duration-500">

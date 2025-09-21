@@ -11,7 +11,7 @@
     @extend .text-md;
     font-weight: 500;
     cursor: pointer;
-
+   
     @media (min-width: $mq-lg) {
         min-height: 52px;
     }
@@ -19,7 +19,7 @@
     &--dark {
         background-color: $color-dark;
         color: $color-light;
-        transition: background-color $tran;
+        transition: opacity 1000ms ease, transform 1000ms ease, background-color $tran;
 
         @media #{$mouse-device} {
             &:hover:not(:active) {
@@ -35,13 +35,14 @@
 
     &--light {
         background-color: $color-light;
-        border: 1px solid $color-dark;
+        border: 1.5px solid $color-dark;
         color: $color-dark;
-        transition: outline $tran;
+        outline: 1.5px solid transparent;
+        transition: opacity 1000ms ease, transform 1000ms ease, outline-color $tran;
 
         @media #{$mouse-device} {
             &:hover:not(:active) {
-                outline: 1.5px solid $color-dark;
+                outline-color: $color-dark;
             }
         }
 
@@ -59,7 +60,7 @@
     &--accent-first {
         background-color: $color-accent-first;
         color: $color-light;
-        transition: background-color $tran;
+        transition:opacity 1000ms ease, transform 1000ms ease, background-color $tran;
 
         @media #{$mouse-device} {
             &:hover:not(:active) {
