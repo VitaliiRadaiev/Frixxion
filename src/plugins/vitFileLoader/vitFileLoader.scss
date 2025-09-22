@@ -80,4 +80,8 @@
             pointer-events: none;
         }
     }
+
+    & #mfcf7_zl_multifilecontainer, & [data-name="user-files-zl-mfcf7-upld-btn"] {
+        display: none;
+    }
 }

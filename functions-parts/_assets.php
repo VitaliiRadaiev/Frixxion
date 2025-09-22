@@ -5,10 +5,10 @@
 
 function my_assets()
 {
-    if (!is_user_logged_in() && !is_admin()) {
-        wp_deregister_script('jquery');
-        wp_register_script('jquery', false);
-    }
+    // if (!is_user_logged_in() && !is_admin()) {
+    //     wp_deregister_script('jquery');
+    //     wp_register_script('jquery', false);
+    // }
 
     wp_enqueue_style('main-style', get_template_directory_uri() . '/assets/css/main.css');
     wp_enqueue_script(
