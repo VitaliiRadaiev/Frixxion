@@ -12,7 +12,7 @@ $card_data = wp_parse_args($card_data, [
 <div class="grey-card-with-number rounded-[10px] p-[16px] md:p-[20px] bg-color-dark-20 <?= $classes ?>">
     <div class="relative z-2 md-max:flex md-max:items-center gap-[20px]">
         <?php if (check($num)): ?>
-            <div class="md:mb-[30px] min-w-[46px] text-gradient-first h2 font-medium">
+            <div class="md:mb-[30px] min-w-[46px] text-gradient-first h2 font-medium inline-block">
                 <?= $num ?>
             </div>
         <?php endif; ?>

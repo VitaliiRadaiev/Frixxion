@@ -13,10 +13,9 @@ if (!$data['section_utils']['section_hide']):
             ]) ?>
 
             <div class="mt-[30px] lg:mt-[50px] grid gap-[40px] lg:gap-[60px]">
-                <div class="grid gap-[30px] lg:gap-[50px] lg:grid-cols-2">
-                    <div data-aos="fade-in" data-aos-delay="1000" class="lg:order-2 relative overflow-hidden rounded-[10px] aspect-[1/0.7] sm:aspect-[1/0.54] lg:aspect-auto lg:min-h-[320px] bg-gradient-second">
+                <div class="grid gap-[30px] lg:gap-[50px] lg:grid-cols-2 lg:items-center">
+                    <div data-aos="fade-in" data-aos-delay="1000" class="lg:order-2 overflow-hidden rounded-[10px] bg-gradient-second">
                         <?php get_template_part(get_part_path('image'), null, [
-                            'classes' => 'ibg',
                             'image_data' => $row_first['image']
                         ]) ?>
                     </div>
@@ -34,10 +33,9 @@ if (!$data['section_utils']['section_hide']):
                         } ?>
                     </div>
                 </div>
-                <div class="grid gap-[30px] lg:gap-[50px] lg:grid-cols-2 bg-color-light rounded-[10px] p-[10px] md:p-[30px] lg:p-[10px]">
-                    <div data-aos="fade-in" data-aos-delay="1000" class="relative overflow-hidden rounded-[10px] aspect-[1/0.75] sm:aspect-[1/0.54] lg:aspect-auto lg:min-h-[442px] bg-gradient-second">
+                <div class="grid gap-[30px] lg:gap-[50px] lg:items-center lg:grid-cols-2 bg-color-light rounded-[10px] p-[10px] md:p-[30px] lg:p-[10px]">
+                    <div data-aos="fade-in" data-aos-delay="1000" class="overflow-hidden rounded-[10px] bg-gradient-second">
                         <?php get_template_part(get_part_path('image'), null, [
-                            'classes' => 'ibg',
                             'image_data' => $row_second['image']
                         ]) ?>
                     </div>

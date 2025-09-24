@@ -53,7 +53,11 @@
         popupContentEl.classList.remove("hidden");
         initInputMask();
         if (window.wpcf7 && wpcf7.init) {
-          wpcf7.init(popupFormContainer.querySelector(".wpcf7-form"));
+          const form = popupFormContainer.querySelector(".wpcf7-form");
+          wpcf7.init(form);
+
+          const inputSubject = form.querySelector('input[name="your-subject"]');
+          if(inputSubject) inputSubject.value = document.title;
         }
       } else {
         window.popup.open("#popup-unsuccess");
@@ -76,4 +80,7 @@
       scrollContainer?.swiper && scrollContainer.swiper.update();
     });
   });
+
+  const wpcf7FormInputs = document.querySelectorAll('.wpcf7-form input[name="your-subject"]');
+  wpcf7FormInputs.forEach(input => input.value = document.title);
 }

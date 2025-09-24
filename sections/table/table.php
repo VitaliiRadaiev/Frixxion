@@ -14,6 +14,9 @@ if (!$data['section_utils']['section_hide']):
         true
     );
 ?>
+<script>
+    console.log( <?= json_encode($data); ?> );
+</script>
     <section <?= get_section_id($data) ?> class="table-section has-dark-bg section-space-top relative rounded-[20px] py-[60px] lg:py-[100px] overflow-hidden">
         <?php get_template_part(get_part_path('dark-bg')) ?>
 
@@ -67,11 +70,7 @@ if (!$data['section_utils']['section_hide']):
                                         <div class="mt-[30px] lg:mt-[40px]">
                                             <?php get_template_part(get_part_path('button'), null, [
                                                 'classes' => 'w-full',
-                                                'button_data' => [
-                                                    'button_type' => 'link',
-                                                    'link' => $table_footer[$col],
-                                                    'button_style' => 'accent-first',
-                                                ]
+                                                'button_data' => $table_footer[$col]
                                             ]) ?>
                                         </div>
                                     <?php endif; ?>

@@ -38,11 +38,12 @@
         border: 1.5px solid $color-dark;
         color: $color-dark;
         outline: 1.5px solid transparent;
-        transition: opacity 1000ms ease, transform 1000ms ease, outline-color $tran;
+        transition: opacity 1000ms ease, transform 1000ms ease, outline-color $tran, background-color $tran;
 
         @media #{$mouse-device} {
             &:hover:not(:active) {
                 outline-color: $color-dark;
+                background-color: #e6e6e6;
             }
         }
 

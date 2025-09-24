@@ -19,6 +19,13 @@
     &.animate {
         & [data-marquee-container] {
             animation: marquee var(--speed) linear infinite;
+            animation-play-state: running;
+        }
+    }
+
+    &.paused {
+        & [data-marquee-container] {
+            animation-play-state: paused;
         }
     }
 }

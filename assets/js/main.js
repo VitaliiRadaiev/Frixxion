@@ -1057,8 +1057,24 @@ window.addEventListener("DOMContentLoaded", () => {
 
             marquee.classList.add('animate');
             marquee.classList.remove('opacity-0');
-            marquee.style.setProperty('--speed', `${20/800*logoContainer.clientWidth}s`);
-        } 
+            marquee.style.setProperty('--speed', `${20 / 800 * logoContainer.clientWidth}s`);
+
+            if (isMobile()) {
+                marquee.addEventListener('pointerdown', () => {
+                    marquee.classList.add('paused');
+                });
+                marquee.addEventListener('pointerup', () => {
+                    marquee.classList.remove('paused');
+                });
+            } else {
+                marquee.addEventListener('mouseenter', () => {
+                    marquee.classList.add('paused');
+                });
+                marquee.addEventListener('mouseleave', () => {
+                    marquee.classList.remove('paused');
+                });
+            }
+        }
     }
 }
     // /= sections
@@ -1119,7 +1135,11 @@ window.addEventListener("DOMContentLoaded", () => {
         popupContentEl.classList.remove("hidden");
         initInputMask();
         if (window.wpcf7 && wpcf7.init) {
-          wpcf7.init(popupFormContainer.querySelector(".wpcf7-form"));
+          const form = popupFormContainer.querySelector(".wpcf7-form");
+          wpcf7.init(form);
+
+          const inputSubject = form.querySelector('input[name="your-subject"]');
+          if(inputSubject) inputSubject.value = document.title;
         }
       } else {
         window.popup.open("#popup-unsuccess");
@@ -1142,6 +1162,9 @@ window.addEventListener("DOMContentLoaded", () => {
       scrollContainer?.swiper && scrollContainer.swiper.update();
     });
   });
+
+  const wpcf7FormInputs = document.querySelectorAll('.wpcf7-form input[name="your-subject"]');
+  wpcf7FormInputs.forEach(input => input.value = document.title);
 }
 
     // /= modules

@@ -52,6 +52,10 @@ function remove_menus()
 
 add_action('admin_menu', 'remove_menus');
 
+add_action('init', function() {
+    remove_post_type_support('page', 'editor');
+});
+
 define('ICL_DONT_LOAD_LANGUAGE_SELECTOR_CSS', true);
 
 

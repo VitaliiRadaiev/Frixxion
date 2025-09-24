@@ -11,7 +11,23 @@
 
             marquee.classList.add('animate');
             marquee.classList.remove('opacity-0');
-            marquee.style.setProperty('--speed', `${20/800*logoContainer.clientWidth}s`);
-        } 
+            marquee.style.setProperty('--speed', `${20 / 800 * logoContainer.clientWidth}s`);
+
+            if (isMobile()) {
+                marquee.addEventListener('pointerdown', () => {
+                    marquee.classList.add('paused');
+                });
+                marquee.addEventListener('pointerup', () => {
+                    marquee.classList.remove('paused');
+                });
+            } else {
+                marquee.addEventListener('mouseenter', () => {
+                    marquee.classList.add('paused');
+                });
+                marquee.addEventListener('mouseleave', () => {
+                    marquee.classList.remove('paused');
+                });
+            }
+        }
     }
 }

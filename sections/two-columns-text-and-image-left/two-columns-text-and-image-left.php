@@ -10,10 +10,9 @@ if (!$data['section_utils']['section_hide']):
                 'head_data' => $data['section_head']
             ]) ?>
 
-            <div class="mt-[30px] lg:mt-[50px] grid gap-[30px] lg:gap-[52px] lg:grid-cols-2">
-                <div data-aos="fade-in" data-aos-delay="1000" class="relative overflow-hidden rounded-[10px] aspect-[1/0.7] sm:aspect-[1/0.54] lg:aspect-auto lg:min-h-[320px] bg-gradient-second">
+            <div class="mt-[30px] lg:mt-[50px] grid gap-[30px] lg:gap-[52px] lg:grid-cols-2 lg:items-center">
+                <div data-aos="fade-in" data-aos-delay="1000" class="overflow-hidden rounded-[10px] bg-gradient-second">
                     <?php get_template_part(get_part_path('image'), null, [
-                        'classes' => 'ibg',
                         'image_data' => $data['image']
                     ]) ?>
                 </div>

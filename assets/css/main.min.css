@@ -7110,6 +7110,12 @@ pageid {
 [data-marquee].animate [data-marquee-container] {
   -webkit-animation: marquee var(--speed) linear infinite;
           animation: marquee var(--speed) linear infinite;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+[data-marquee].paused [data-marquee-container] {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
 }
 
 @-webkit-keyframes marquee {
@@ -7278,10 +7284,10 @@ pageid {
   border: 1.5px solid #191a1d;
   color: #191a1d;
   outline: 1.5px solid transparent;
-  -webkit-transition: opacity 1000ms ease, outline-color 0.2s ease, -webkit-transform 1000ms ease;
-  transition: opacity 1000ms ease, outline-color 0.2s ease, -webkit-transform 1000ms ease;
-  transition: opacity 1000ms ease, transform 1000ms ease, outline-color 0.2s ease;
-  transition: opacity 1000ms ease, transform 1000ms ease, outline-color 0.2s ease, -webkit-transform 1000ms ease;
+  -webkit-transition: opacity 1000ms ease, outline-color 0.2s ease, background-color 0.2s ease, -webkit-transform 1000ms ease;
+  transition: opacity 1000ms ease, outline-color 0.2s ease, background-color 0.2s ease, -webkit-transform 1000ms ease;
+  transition: opacity 1000ms ease, transform 1000ms ease, outline-color 0.2s ease, background-color 0.2s ease;
+  transition: opacity 1000ms ease, transform 1000ms ease, outline-color 0.2s ease, background-color 0.2s ease, -webkit-transform 1000ms ease;
 }
 .btn--light:active {
   -webkit-transition: outline 0s;
@@ -8132,6 +8138,11 @@ pageid {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
+  .lg\:items-center {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
   .lg\:justify-start {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
@@ -8522,6 +8533,9 @@ pageid {
     display: -ms-flexbox;
     display: flex;
   }
+  .md-max\:hidden {
+    display: none;
+  }
   .md-max\:items-center {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -8645,6 +8659,7 @@ pageid {
   }
   .btn--light:hover:not(:active) {
     outline-color: #191a1d;
+    background-color: #e6e6e6;
   }
   .btn--accent-first:hover:not(:active) {
     background-color: #fa2527;

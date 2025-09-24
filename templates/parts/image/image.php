@@ -13,10 +13,8 @@ if ($image_data['mob'] || $image_data['desk']):
 ?>
 
     <?php if (check($image_data['mob']) && $image_data['desk']): ?>
-        <picture>
-            <source srcset="<?= wp_get_attachment_image_url($image_data['desk'], 'large'); ?>" media="(min-width: <?= $media_query ?>)" />
-            <?php get_image($image_data['mob'], $classes, true, 'large', $attributes) ?>
-        </picture>
+        <?php get_image($image_data['desk'], $classes . ' md-max:hidden', true, 'large', $attributes) ?>
+        <?php get_image($image_data['mob'], $classes . ' md:hidden', true, 'large', $attributes) ?>
     <?php else:
         get_image(
             check($image_data['mob']) ? $image_data['mob'] : $image_data['desk'],
