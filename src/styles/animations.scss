@@ -1,7 +1,9 @@
 @use "./utils/abstracts" as *;
 
 [data-aos="cascade-fade-in"] {
-    transition-duration: 0s !important;
+    &:not(.swiper-wrapper) {
+        transition-duration: 0s !important;
+    }
 
     @for $i from 0 through 15 {
         & > * {
